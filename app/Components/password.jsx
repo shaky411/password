@@ -203,10 +203,11 @@ export default function Password() {
 
       <button
         onClick={handleGeneratePassword}
-        className="bg-[#FD735B] text-white px-4 py-2 rounded-lg mt-4 w-full hover:opacity-45 duration-500"
+        className="bg-[#FD735B] text-white px-4 py-2 rounded-lg mt-4 w-full hover:opacity-45 duration-500 font-semibold"
       >
         Generate Password
       </button>
+      <span className="text-sm mr-auto mt-4 text-slate-400">Created by M Norris</span>
     </div>
   );
 }

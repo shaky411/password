@@ -20,6 +20,7 @@ export default function Home() {
         </div>
       </div>
       <Password />
+      <span className="text-sm mt-4 my-10 text-rose-500">Once copied, please save the password in a secure location such as a password manager.</span>
     </main>
   );
 }
