@@ -19,6 +19,8 @@ export default function Password() {
     special: false,
   });
 
+  // const myDefault = "5168";
+
   const specialCharacters = "@%!#$?".split("");
 
   // Generate array of numeric characters using split()
@@ -201,7 +203,7 @@ export default function Password() {
 
       <button
         onClick={handleGeneratePassword}
-        className="bg-indigo-500 text-white px-4 py-2 rounded-lg mt-4 w-full hover:opacity-45 duration-500"
+        className="bg-[#FD735B] text-white px-4 py-2 rounded-lg mt-4 w-full hover:opacity-45 duration-500"
       >
         Generate Password
       </button>
