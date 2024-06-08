@@ -147,26 +147,29 @@ export default function Password() {
     <div className="flex flex-col items-center justify-center max-w-2xl w-full border rounded-lg p-10">
       <Input
         variant="bordered"
-        className="w-1/2 mr-auto"
+        className="w-full sm:w-1/2 mr-auto"
         type="number"
         label="Password Length"
         value={passwordOptions.length}
         onChange={handleLengthChange}
       />
-      <div className="flex gap-5 mt-4">
+      <div className="display:block sm:flex justify-start gap-4 mt-4">
         <Checkbox
+        className="mr-1 md:mr-0"
           checked={passwordOptions.lowerCase}
           onChange={(e) => handleCheckboxChange("lowerCase", e.target.checked)}
         >
           Lowercase
         </Checkbox>
         <Checkbox
+        className="mr-1 md:mr-0"
           checked={passwordOptions.upperCase}
           onChange={(e) => handleCheckboxChange("upperCase", e.target.checked)}
         >
-          Upercase
+          Uppercase
         </Checkbox>
         <Checkbox
+        className="mr-1 md:mr-0"
           checked={passwordOptions.numeric}
           onChange={(e) => handleCheckboxChange("numeric", e.target.checked)}
         >
@@ -176,7 +179,7 @@ export default function Password() {
           checked={passwordOptions.special}
           onChange={(e) => handleCheckboxChange("special", e.target.checked)}
         >
-          Special Characters
+          Special
         </Checkbox>
       </div>
       {showErrorMessage && (
