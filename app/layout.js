@@ -7,9 +7,9 @@ export const metadata = {
   title: {
     default: "Password Generator"
   },
-  // alternates: {
-  //   canonical: "https://www.graygecko.co.uk"
-  // },
+  alternates: {
+    canonical: "https://www.passwordmanager.org.uk"
+  },
   keywords: "password generator, passwords, password, create password, secure, security, free, free tool",
   openGraph: {
     title: "Password Generator",
