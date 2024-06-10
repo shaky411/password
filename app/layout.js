@@ -28,7 +28,7 @@ export const metadata = {
   },
   description:
     "This is a free to use password generator, enjoy",
-    metadataBase: new URL("https://www.passwordgenerator.org.uk"),
+    metadataBase: new URL("https://www.passwordmanager.org.uk"),
   robots: {
     index: true,
     follow: true,
