@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import image from "../public/opengraph-image.png"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,7 +14,12 @@ export const metadata = {
   keywords: "password generator, passwords, password, create password, secure, security, free, free tool",
   openGraph: {
     title: "Free to use Password Generator",
-    description: "Simple password generator created with NextJS and styled using TailwindCSS"
+    description: "Simple password generator created with NextJS and styled using TailwindCSS",
+    images: [
+      {
+        url: image.src
+      },
+    ]
   },
   twitter: {
     card: "summary_large_image"
