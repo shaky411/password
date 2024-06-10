@@ -9,7 +9,7 @@ export default function Info() {
             </div>
             
 
-            <div className="grid md:grid-cols-3 gap-7">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-7">
                 <div className="col-span-2 sm:col-span-1 p-4 border rounded-lg bg-indigo-500 hover:scale-110 hover:shadow-lg duration-300 bg-opacity-40 flex flex-col gap-2">
                     <span className="font-semibold">
                         Length
@@ -33,21 +33,21 @@ export default function Info() {
                     <li>Avoid dictionary words: Single dictionary words are easily cracked by brute-force attacks.</li>
                 </div>
 
-                <div className="p-4 border rounded-lg bg-red-500 hover:scale-110 hover:shadow-lg duration-300 bg-opacity-40 flex flex-col gap-2">
+                <div className="p-4 border rounded-lg bg-red-500 hover:scale-110 hover:shadow-lg duration-300 bg-opacity-40 flex flex-col gap-2 sm:col-span-1 col-span-2">
                     <span className="font-semibold">
                     Uniqueness
                     </span>
                     <li>Different for each account: Use a unique password for every account to prevent a breach on one site from compromising others.</li>
                 </div>
 
-                <div className="p-4 border rounded-lg bg-slate-300 hover:scale-110 hover:shadow-lg duration-300 bg-opacity-40 flex flex-col gap-2">
+                <div className="p-4 border rounded-lg bg-slate-300 hover:scale-110 hover:shadow-lg duration-300 bg-opacity-40 flex flex-col gap-2 sm:col-span-1 col-span-2">
                     <span className="font-semibold">
                     Password Managers
                     </span>
                     <li>Use a password manager: Tools like LastPass, 1Password, or Bitwarden can generate, store, and manage your passwords securely. This way, you only need to remember one master password.</li>
                 </div>
 
-                <div className="p-4 border rounded-lg bg-purple-500 hover:scale-110 hover:shadow-lg duration-300 bg-opacity-40 flex flex-col gap-2">
+                <div className="p-4 border rounded-lg bg-purple-500 hover:scale-110 hover:shadow-lg duration-300 bg-opacity-40 flex flex-col gap-2 sm:col-span-1 col-span-2">
                     <span className="font-semibold">
                     Regular Updates
                     </span>
@@ -55,7 +55,7 @@ export default function Info() {
                     <li>Monitor for breaches: Use services like Have I Been Pwned to check if your email or password has been involved in a data breach.</li>
                 </div>
 
-                <div className="p-4 border rounded-lg bg-pink-500 hover:scale-110 hover:shadow-lg duration-300 bg-opacity-40 flex flex-col gap-2">
+                <div className="p-4 border rounded-lg bg-pink-500 hover:scale-110 hover:shadow-lg duration-300 bg-opacity-40 flex flex-col gap-2 sm:col-span-1 col-span-2">
                     <span className="font-semibold">
                     Multi-Factor Authentication (MFA)
                     </span>
