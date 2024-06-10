@@ -47,7 +47,7 @@ export default function Password() {
   };
 
   const handleLengthChange = (e) => {
-    const length = parseInt(e.target.value);
+    let length = parseInt(e.target.value);
     if (!isNaN(length)) {
       setPasswordOptions((prevOptions) => ({
         ...prevOptions,
