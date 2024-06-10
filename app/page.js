@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <main className="flex flex-col items-center justify-center max-w-5xl mx-auto p-4">
       <div className="flex flex-col items-start justify-center m-6">
-        <Image src={mainImage} width={300} height={300} alt="image" />
+        <Image priority src={mainImage} width={300} height={300} alt="image" />
         <div className="mt-4">
           <h1
             className={`${chakra.className} font-bold text-4xl text-slate-600`}
