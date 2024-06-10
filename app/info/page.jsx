@@ -4,12 +4,15 @@ export default function Info() {
     return (
         <main className="flex flex-col items-center justify-center max-w-3xl mx-auto p-10 sm:p-4">
 
-            <div className="m-10 text-4xl font-light">
-            <h2>Info</h2>
+            <div className="mt-10 flex flex-col items-center justify-center gap-4">
+            <h2 className="text-4xl font-light">Info</h2>
+            <p className="font-light">Creating secure passwords is crucial for protecting your personal and sensitive information. Here are some guidelines and tips to help you create strong and secure passwords:</p>
             </div>
+
+            
             
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-7">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-7 mt-10">
                 <div className="col-span-2 sm:col-span-1 p-4 border rounded-lg bg-indigo-500 hover:scale-110 hover:shadow-lg duration-300 bg-opacity-40 flex flex-col gap-2">
                     <span className="font-semibold">
                         Length
@@ -63,7 +66,7 @@ export default function Info() {
                 </div>
             </div>
 
-            <Link className="mt-5 mr-auto bg-blue-500 px-4 py-2 text-white rounded" href="/">Back</Link>
+            <Link className="mt-10 mr-auto bg-blue-500 hover:opacity-50 duration-400 px-4 py-2 text-white rounded" href="/">&larr; Back</Link>
 
             
         </main>
