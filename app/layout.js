@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import image from "../public/opengraph-image.png"
+import ogImage from "./opengraph-image.png"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +17,7 @@ export const metadata = {
     description: "Simple password generator created with NextJS and styled using TailwindCSS",
     images: [
       {
-        url: image.src
+        url: ogImage.src
       },
     ]
   },
