@@ -5,14 +5,14 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: {
-    default: "Free Password Generator"
+    default: "Password Generator"
   },
   alternates: {
     canonical: "https://www.passwordmanager.org.uk"
   },
   keywords: "password generator, passwords, password, create password, secure, security, free, free tool",
   openGraph: {
-    title: "Password Generator",
+    title: "Free to use Password Generator",
     description: "Simple password generator created with NextJS and styled using TailwindCSS"
   },
   twitter: {
