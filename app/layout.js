@@ -5,7 +5,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: {
-    default: "Password Generator"
+    default: "Free Password Generator"
   },
   alternates: {
     canonical: "https://www.passwordmanager.org.uk"
