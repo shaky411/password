@@ -83,7 +83,7 @@ export default function Info() {
                 </div>
             </div>
 
-            <Link className="mt-10 mr-auto bg-blue-500 hover:opacity-50 duration-400 px-4 py-2 text-white rounded" href="/">&larr; Back</Link>
+            <Link className="my-10 mr-auto bg-blue-500 hover:opacity-50 duration-400 px-4 py-2 text-white rounded" href="/">&larr; Back</Link>
 
             
         </main>
