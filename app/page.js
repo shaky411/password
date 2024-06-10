@@ -29,7 +29,7 @@ export default function Home() {
         </div>
         <Link
           href="/info"
-          className="border-[#FD735B] border-2 text-slate-600 hover:bg-[#FD735B] hover:text-white border px-2 py-1 rounded-lg mt-4 duration-500 text-center w-[100px]"
+          className="border-[#FD735B] text-slate-600 hover:bg-[#FD735B] hover:text-white hover:shadow-md border-2 px-2 py-1 rounded-lg mt-4 duration-500 text-center w-[100px]"
         >
           <FontAwesomeIcon className="mr-1" icon={faInfoCircle} />
           Info
