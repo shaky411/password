@@ -12,7 +12,7 @@ export default function Password() {
   const [checkboxValid, setCheckboxValid] = useState(false);
   const [showErrorMessage, setShowErrorMessage] = useState(false);
   const [passwordOptions, setPasswordOptions] = useState({
-    length: 10,
+    length: 12,
     lowerCase: false,
     upperCase: false,
     numeric: false,
