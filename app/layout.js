@@ -17,7 +17,9 @@ export const metadata = {
     description: "Simple password generator created with NextJS and styled using TailwindCSS",
     images: [
       {
-        url: ogImage.src
+        url: ogImage.src,
+        width: ogImage.width,
+        height: ogImage.height
       },
     ]
   },
