@@ -64,6 +64,23 @@ export default function Info() {
                     </span>
                     <li>Use a password manager: Tools like LastPass, 1Password, or Bitwarden can generate, store, and manage your passwords securely. This way, you only need to remember one master password.</li>
                 </div>
+
+                <div className="p-4 border rounded-lg bg-orange-500 hover:scale-110 hover:shadow-lg duration-300 bg-opacity-40 flex flex-col gap-2 sm:col-span-3 col-span-2">
+                    <span className="font-semibold">
+                    Examples of Strong Passwords
+                    </span>
+                    <li>Randomly generated: <strong>hT7&3z@Q5!mL0xW</strong></li>
+                    <li>Passphrases: Create a long and unique phrase using random words or an easy-to-remember sentence with some complexity added.</li>
+                    <li>Example: <strong>CorrectHorseBatteryStaple!92</strong></li>
+                </div>
+
+                <div className="p-4 border rounded-lg bg-lime-500 hover:scale-110 hover:shadow-lg duration-300 bg-opacity-40 flex flex-col gap-2 sm:col-span-3 col-span-2">
+                    <span className="font-semibold">
+                    Bad Practices to Avoid
+                    </span>
+                    <li>Personal Information: Avoid using easily guessable information like your name, birthday, or pet's name.</li>
+                    <li>Common Passwords: Do not use passwords like "password," "123456," or "qwerty."</li>
+                </div>
             </div>
 
             <Link className="mt-10 mr-auto bg-blue-500 hover:opacity-50 duration-400 px-4 py-2 text-white rounded" href="/">&larr; Back</Link>
