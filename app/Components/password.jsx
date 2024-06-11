@@ -207,7 +207,6 @@ export default function Password() {
       >
         Generate Password
       </button>
-      <span className="text-sm mr-auto mt-4 text-slate-400">Created by M Norris</span>
     </div>
   );
 }

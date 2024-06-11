@@ -15,7 +15,7 @@ import Managers from "./Components/managers";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-center max-w-4xl mx-auto p-6">
+    <main className="flex flex-col items-center justify-center max-w-4xl mx-auto p-6 mb-10">
       <div className="flex flex-col gap-4 justify-start mr-auto mb-4">
         <Image priority src={mainImage} width={325} height={300} alt="image" />
         <div className="">
@@ -30,7 +30,7 @@ export default function Home() {
         </div>
         <Link
           href="/info"
-          className="border-[#FD735B] text-slate-600 hover:bg-[#FD735B] hover:text-white hover:shadow-md border-2 px-2 py-1 rounded-lg mt-4 duration-500 text-center w-[100px]"
+          className="border-[#FD735B] text-slate-600 hover:bg-[#FD735B] hover:text-white hover:shadow-md border-2 px-2 py-1 rounded-lg duration-500 text-center w-[100px]"
         >
           <FontAwesomeIcon className="mr-1" icon={faInfoCircle} />
           Info
@@ -52,9 +52,12 @@ export default function Home() {
         </p>
       </div>
 
-      {/* <div className="flex flex-col max-w-2xl">
-      <Managers />
-      </div> */}
+<div className="mr-auto">
+<Managers />
+</div>
+      
+      <span className="mr-auto mt-10 text-tiny text-slate-400">Site created by M.Norris ©2024</span>
+      
       
     </main>
   );
