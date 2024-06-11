@@ -11,21 +11,22 @@ import {
   faTriangleExclamation,
 } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
+import Managers from "./Components/managers";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-center max-w-5xl mx-auto p-4">
-      <div className="flex flex-col items-start justify-center m-6">
-        <Image priority src={mainImage} width={300} height={300} alt="image" />
-        <div className="mt-4">
+    <main className="flex flex-col items-center justify-center max-w-4xl mx-auto p-6">
+      <div className="flex flex-col gap-4 justify-start mr-auto mb-4">
+        <Image priority src={mainImage} width={325} height={300} alt="image" />
+        <div className="">
           <h1
-            className={`${chakra.className} font-bold text-4xl text-slate-600`}
+            className={`${chakra.className} font-bold text-5xl text-slate-600`}
           >
             Password Generator
           </h1>
-          <span className="text-lg font-light">
+          <h2 className="mt-2 font-light">
             Create secure passwords and easily copy them to your clipboard.
-          </span>
+          </h2>
         </div>
         <Link
           href="/info"
@@ -37,7 +38,7 @@ export default function Home() {
       </div>
       <Password />
 
-      <div className="max-w-2xl mt-4 flex flex-col gap-4">
+      <div className="mt-4 flex flex-col gap-4">
         <span className="text-sm text-rose-400">
           <FontAwesomeIcon className="mr-1" icon={faTriangleExclamation} />
           Once copied, please save the password in a secure location such as a
@@ -50,6 +51,11 @@ export default function Home() {
           of your personal and professional life on the internet.
         </p>
       </div>
+
+      {/* <div className="flex flex-col max-w-2xl">
+      <Managers />
+      </div> */}
+      
     </main>
   );
 }
