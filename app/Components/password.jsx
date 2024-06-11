@@ -6,8 +6,10 @@ import { Input } from "@nextui-org/react";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopy } from "@fortawesome/free-solid-svg-icons";
+import {Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure} from "@nextui-org/react";
 
 export default function Password() {
+  const {isOpen, onOpen, onOpenChange} = useDisclosure();
   const [generatedPassword, setGeneratedPassword] = useState("");
   const [checkboxValid, setCheckboxValid] = useState(false);
   const [showErrorMessage, setShowErrorMessage] = useState(false);
@@ -142,7 +144,8 @@ export default function Password() {
   const handleCopyPassword = () => {
     if (generatedPassword) {
       navigator.clipboard.writeText(generatedPassword);
-      alert("Password copied to clipboard!");
+      // alert("Password copied to clipboard!");
+      onOpen()
     }
   };
 
@@ -231,6 +234,28 @@ export default function Password() {
       >
         Generate Password
       </button>
+
+      <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+        <ModalContent>
+          {(onClose) => (
+            <>
+              <ModalHeader className="flex flex-col gap-1">Password copied to your clipboard.</ModalHeader>
+              <ModalBody>
+                <p className="bg-yellow-100 p-4 rounded-lg"> 
+                  Your password has been copied to your clipboard. To paste the password somewhere else, press <strong>CTRL + V</strong> on your keyboard.
+                </p>
+                
+                
+              </ModalBody>
+              <ModalFooter>
+                <Button color="danger" variant="light" onPress={onClose}>
+                  Close
+                </Button>
+              </ModalFooter>
+            </>
+          )}
+        </ModalContent>
+      </Modal>
     </div>
   );
 }
