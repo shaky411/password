@@ -11,6 +11,7 @@ export default function Password() {
   const [generatedPassword, setGeneratedPassword] = useState("");
   const [checkboxValid, setCheckboxValid] = useState(false);
   const [showErrorMessage, setShowErrorMessage] = useState(false);
+  const [passwordStrength, setPasswordStrength] = useState("");
   const [passwordOptions, setPasswordOptions] = useState({
     length: 12,
     lowerCase: false,
@@ -65,6 +66,7 @@ export default function Password() {
       const password = generatePassword(passwordOptions);
       setGeneratedPassword(password);
       setShowErrorMessage(false); // Hide error message if at least one option is selected
+      setPasswordStrength(evaluatePasswordStrength(password, passwordOptions));
     } else {
       setShowErrorMessage(true); // Show error message if no option is selected
     }
@@ -144,6 +146,22 @@ export default function Password() {
     }
   };
 
+  const evaluatePasswordStrength = (password, options) => {
+    let strength = 0;
+
+    if (options.length >= 12) strength += 1;
+    if (options.length >= 16) strength += 1;
+
+    if (options.lowerCase) strength += 1;
+    if (options.upperCase) strength += 1;
+    if (options.numeric) strength += 1;
+    if (options.special) strength += 1;
+
+    if (strength <= 2) return "Weak";
+    if (strength <= 4) return "Good";
+    return "Strong";
+  };
+
 
   return (
     <div className="flex flex-col items-start justify-center max-w-4xl w-full border rounded-lg p-4 sm:p-10">
@@ -197,6 +215,12 @@ export default function Password() {
         ></textarea>
 
 <button onClick={handleCopyPassword} disabled={!generatedPassword} className="bg-slate-500 text-white px-4 py-2 rounded-lg ml-auto hover:opacity-45 duration-500 text-sm"><FontAwesomeIcon className="" icon={faCopy} /></button>
+      </div>
+
+      <div className="mt-4 w-full text-center">
+        <span className={`font-semibold ${passwordStrength === "Weak" ? "text-red-500" : passwordStrength === "Good" ? "text-yellow-500" : "text-green-500"}`}>
+          {passwordStrength && `${passwordStrength} password`}
+        </span>
       </div>
 
       
