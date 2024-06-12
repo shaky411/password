@@ -54,9 +54,9 @@ export default function Home() {
         </p>
       </div>
 
-      <span className="mr-auto my-4">My Hardware Recommendation</span>
+      <span className="mr-auto mt-10">My Hardware recommendations:</span>
 
-      <div className="flex flex-col sm:flex-row justify-center items-center mr-auto gap-10 border p-6 rounded-lg shadow">
+      <div className="flex mt-5 flex-col sm:flex-row justify-center items-center mr-auto gap-10 border p-6 rounded-lg shadow">
         <Image
           src={securitykey}
           width={150}
