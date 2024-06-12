@@ -165,6 +165,20 @@ export default function Password() {
     return "Strong";
   };
 
+  const getBackgroundColor = (strength) => {
+    switch (strength) {
+      case "Weak":
+        return "bg-red-100";
+      case "Good":
+        return "bg-yellow-100";
+      case "Strong":
+        return "bg-green-100";
+      default:
+        return "bg-slate-100";
+    }
+  };
+
+
 
   return (
     <div className="flex flex-col items-start justify-center max-w-4xl w-full border rounded-lg p-4 sm:p-10">
@@ -208,8 +222,9 @@ export default function Password() {
       {showErrorMessage && (
         <p className="text-red-500 mt-4">Please select at least one option.</p>
       )}
-      <div className="mt-4 bg-slate-100 border p-6 rounded-lg w-full flex items-center gap-4 justify-center">
+      <div className={`mt-4 border p-6 rounded-lg w-full flex items-center gap-4 justify-center ${getBackgroundColor(passwordStrength)}`}>
         <textarea
+        id="result"
           readOnly
           className="border resize-none border-slate-300 shadow-lg rounded-lg p-4 text-center w-full"
           placeholder="Your secure password"
