@@ -2,6 +2,9 @@ import Image from "next/image";
 import passwordImage from "../../public/1password.jpg";
 import dashlane from "../../public/dashlane.jpg";
 import Link from "next/link";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTriangleExclamation } from "@fortawesome/free-solid-svg-icons";
 
 export default function Managers() {
   return (
@@ -34,7 +37,13 @@ export default function Managers() {
         >
           <Image src={dashlane} width={200} height={200} alt="dashlane logo" />
         </Link>
+        
       </div>
+
+      <div className="flex items-center text-sm text-rose-400">
+        <FontAwesomeIcon className="mr-1" icon={faTriangleExclamation} />
+        <p>For ultimate security, I suggest using the password generators provided with your password manager.</p>
+        </div>
     </main>
   );
 }
