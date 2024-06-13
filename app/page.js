@@ -13,7 +13,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import Managers from "./Components/managers";
-import securitykey from "../public/security_key.jpg";
+import securitykey from "../public/security_key.png";
 
 export default function Home() {
   return (
@@ -69,7 +69,7 @@ export default function Home() {
 
       <span className="mr-auto mt-10">My Hardware recommendations:</span>
 
-      <div className="flex mt-5 flex-col sm:flex-row justify-center items-center mr-auto gap-10 border p-6 rounded-lg shadow">
+      <div className="flex mt-5 flex-col sm:flex-row justify-center items-center mr-auto gap-10 border p-6 rounded-lg shadow bg-orange-100">
         <Image
           src={securitykey}
           width={150}
@@ -77,7 +77,7 @@ export default function Home() {
           alt="security key image"
         />
 
-        <p className="font-light">
+        <p className="">
           Using a two-factor authentication (2FA) security key greatly enhances
           online security by providing robust protection against phishing and
           password theft. Unlike SMS or app-based codes, security keys require
