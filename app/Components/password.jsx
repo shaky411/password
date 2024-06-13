@@ -6,10 +6,18 @@ import { Input } from "@nextui-org/react";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopy } from "@fortawesome/free-solid-svg-icons";
-import {Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure} from "@nextui-org/react";
+import {
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  Button,
+  useDisclosure,
+} from "@nextui-org/react";
 
 export default function Password() {
-  const {isOpen, onOpen, onOpenChange} = useDisclosure();
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [generatedPassword, setGeneratedPassword] = useState("");
   const [checkboxValid, setCheckboxValid] = useState(false);
   const [showErrorMessage, setShowErrorMessage] = useState(false);
@@ -24,7 +32,7 @@ export default function Password() {
 
   // const myDefault = "5168";
 
-  const specialCharacters = "@%!#$?".split("");
+  const specialCharacters = "@%!#$?/+-£*~;:".split("");
 
   // Generate array of numeric characters using split()
   const numericCharacters = "0123456789".split("");
@@ -40,9 +48,9 @@ export default function Password() {
       const updatedOptions = { ...prevOptions, [option]: value };
       setCheckboxValid(
         updatedOptions.lowerCase ||
-        updatedOptions.upperCase ||
-        updatedOptions.numeric ||
-        updatedOptions.special
+          updatedOptions.upperCase ||
+          updatedOptions.numeric ||
+          updatedOptions.special
       );
       return updatedOptions;
     });
@@ -120,22 +128,22 @@ export default function Password() {
     return password;
   };
 
-  
-
   useEffect(() => {
     setCheckboxValid(
       passwordOptions.lowerCase ||
-      passwordOptions.upperCase ||
-      passwordOptions.numeric ||
-      passwordOptions.special
+        passwordOptions.upperCase ||
+        passwordOptions.numeric ||
+        passwordOptions.special
     );
   }, [passwordOptions]);
 
   useEffect(() => {
-    if (passwordOptions.lowerCase ||
+    if (
+      passwordOptions.lowerCase ||
       passwordOptions.upperCase ||
       passwordOptions.numeric ||
-      passwordOptions.special) {
+      passwordOptions.special
+    ) {
       setShowErrorMessage(false);
     }
   }, [passwordOptions]);
@@ -144,7 +152,7 @@ export default function Password() {
     if (generatedPassword) {
       navigator.clipboard.writeText(generatedPassword);
       // alert("Password copied to clipboard!");
-      onOpen()
+      onOpen();
     }
   };
 
@@ -177,8 +185,6 @@ export default function Password() {
     }
   };
 
-
-
   return (
     <div className="flex flex-col mt-4 items-start justify-center max-w-4xl w-full border shadow rounded-lg p-4 sm:p-10">
       <Input
@@ -191,31 +197,31 @@ export default function Password() {
       />
       <div className="display:block sm:flex justify-start gap-4 mt-4">
         <Checkbox
-        className="mr-1 md:mr-0"
-        isSelected={passwordOptions.lowerCase}
+          className="mr-1 md:mr-0"
+          isSelected={passwordOptions.lowerCase}
           checked={passwordOptions.lowerCase}
           onChange={(e) => handleCheckboxChange("lowerCase", e.target.checked)}
         >
           Lowercase
         </Checkbox>
         <Checkbox
-        className="mr-1 md:mr-0"
-        isSelected={passwordOptions.upperCase}
+          className="mr-1 md:mr-0"
+          isSelected={passwordOptions.upperCase}
           checked={passwordOptions.upperCase}
           onChange={(e) => handleCheckboxChange("upperCase", e.target.checked)}
         >
           Uppercase
         </Checkbox>
         <Checkbox
-        className="mr-1 md:mr-0"
-        isSelected={passwordOptions.numeric}
+          className="mr-1 md:mr-0"
+          isSelected={passwordOptions.numeric}
           checked={passwordOptions.numeric}
           onChange={(e) => handleCheckboxChange("numeric", e.target.checked)}
         >
           Numeric
         </Checkbox>
         <Checkbox
-        isSelected={passwordOptions.special}
+          isSelected={passwordOptions.special}
           checked={passwordOptions.special}
           onChange={(e) => handleCheckboxChange("special", e.target.checked)}
         >
@@ -225,9 +231,13 @@ export default function Password() {
       {showErrorMessage && (
         <p className="text-red-500 mt-4">Please select at least one option.</p>
       )}
-      <div className={`mt-4 border p-6 rounded-lg w-full flex items-center gap-4 justify-center ${getBackgroundColor(passwordStrength)}`}>
+      <div
+        className={`mt-4 border p-6 rounded-lg w-full flex items-center gap-4 justify-center ${getBackgroundColor(
+          passwordStrength
+        )}`}
+      >
         <textarea
-        id="result"
+          id="result"
           readOnly
           className="border resize-none border-slate-300 shadow-lg rounded-lg p-4 text-center w-full"
           placeholder="Your secure password"
@@ -235,16 +245,28 @@ export default function Password() {
           onChange={() => {}}
         ></textarea>
 
-<button onClick={handleCopyPassword} disabled={!generatedPassword} className="bg-slate-500 text-white px-4 py-2 rounded-lg ml-auto hover:opacity-45 duration-500 text-sm"><FontAwesomeIcon className="" icon={faCopy} /></button>
+        <button
+          onClick={handleCopyPassword}
+          disabled={!generatedPassword}
+          className="bg-slate-500 text-white px-4 py-2 rounded-lg ml-auto hover:opacity-45 duration-500 text-sm"
+        >
+          <FontAwesomeIcon className="" icon={faCopy} />
+        </button>
       </div>
 
       <div className="mt-4 w-full text-center">
-        <span className={`font-semibold ${passwordStrength === "Weak" ? "text-red-500" : passwordStrength === "Good" ? "text-yellow-500" : "text-green-500"}`}>
+        <span
+          className={`font-semibold ${
+            passwordStrength === "Weak"
+              ? "text-red-500"
+              : passwordStrength === "Good"
+              ? "text-yellow-500"
+              : "text-green-500"
+          }`}
+        >
           {passwordStrength && `${passwordStrength} password`}
         </span>
       </div>
-
-      
 
       <button
         onClick={handleGeneratePassword}
@@ -257,13 +279,15 @@ export default function Password() {
         <ModalContent>
           {(onClose) => (
             <>
-              <ModalHeader className="flex flex-col gap-1">Password copied to your clipboard.</ModalHeader>
+              <ModalHeader className="flex flex-col gap-1">
+                Password copied to your clipboard.
+              </ModalHeader>
               <ModalBody>
-                <p className="bg-yellow-100 p-4 rounded-lg"> 
-                  Your password has been copied to your clipboard. To paste the password somewhere else, press <strong>CTRL + V</strong> on your keyboard.
+                <p className="bg-yellow-100 p-4 rounded-lg">
+                  Your password has been copied to your clipboard. To paste the
+                  password somewhere else, press <strong>CTRL + V</strong> on
+                  your keyboard.
                 </p>
-                
-                
               </ModalBody>
               <ModalFooter>
                 <Button color="danger" variant="light" onPress={onClose}>
