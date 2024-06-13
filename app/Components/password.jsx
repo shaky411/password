@@ -15,11 +15,11 @@ export default function Password() {
   const [showErrorMessage, setShowErrorMessage] = useState(false);
   const [passwordStrength, setPasswordStrength] = useState("");
   const [passwordOptions, setPasswordOptions] = useState({
-    length: 12,
-    lowerCase: false,
-    upperCase: false,
-    numeric: false,
-    special: false,
+    length: 20,
+    lowerCase: true,
+    upperCase: true,
+    numeric: true,
+    special: true,
   });
 
   // const myDefault = "5168";
@@ -36,17 +36,16 @@ export default function Password() {
   const upperCasedCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
   const handleCheckboxChange = (option, value) => {
-    setPasswordOptions((prevOptions) => ({
-      ...prevOptions,
-      [option]: value,
-    }));
-    // Check if at least one checkbox is selected
-    setCheckboxValid(
-      passwordOptions.lowerCase ||
-        passwordOptions.upperCase ||
-        passwordOptions.numeric ||
-        passwordOptions.special
-    );
+    setPasswordOptions((prevOptions) => {
+      const updatedOptions = { ...prevOptions, [option]: value };
+      setCheckboxValid(
+        updatedOptions.lowerCase ||
+        updatedOptions.upperCase ||
+        updatedOptions.numeric ||
+        updatedOptions.special
+      );
+      return updatedOptions;
+    });
   };
 
   const handleLengthChange = (e) => {
@@ -121,22 +120,22 @@ export default function Password() {
     return password;
   };
 
-  useEffect(() => {}, [passwordOptions]);
-
-  useEffect(() => {}, []);
+  
 
   useEffect(() => {
-    setShowErrorMessage(false); // Hide error message when at least one checkbox is selected
-  }, [checkboxValid]);
-
-  useEffect(() => {
-    // Hide error message when at least one option is selected
-    if (
+    setCheckboxValid(
       passwordOptions.lowerCase ||
       passwordOptions.upperCase ||
       passwordOptions.numeric ||
       passwordOptions.special
-    ) {
+    );
+  }, [passwordOptions]);
+
+  useEffect(() => {
+    if (passwordOptions.lowerCase ||
+      passwordOptions.upperCase ||
+      passwordOptions.numeric ||
+      passwordOptions.special) {
       setShowErrorMessage(false);
     }
   }, [passwordOptions]);
@@ -193,6 +192,7 @@ export default function Password() {
       <div className="display:block sm:flex justify-start gap-4 mt-4">
         <Checkbox
         className="mr-1 md:mr-0"
+        isSelected={passwordOptions.lowerCase}
           checked={passwordOptions.lowerCase}
           onChange={(e) => handleCheckboxChange("lowerCase", e.target.checked)}
         >
@@ -200,6 +200,7 @@ export default function Password() {
         </Checkbox>
         <Checkbox
         className="mr-1 md:mr-0"
+        isSelected={passwordOptions.upperCase}
           checked={passwordOptions.upperCase}
           onChange={(e) => handleCheckboxChange("upperCase", e.target.checked)}
         >
@@ -207,12 +208,14 @@ export default function Password() {
         </Checkbox>
         <Checkbox
         className="mr-1 md:mr-0"
+        isSelected={passwordOptions.numeric}
           checked={passwordOptions.numeric}
           onChange={(e) => handleCheckboxChange("numeric", e.target.checked)}
         >
           Numeric
         </Checkbox>
         <Checkbox
+        isSelected={passwordOptions.special}
           checked={passwordOptions.special}
           onChange={(e) => handleCheckboxChange("special", e.target.checked)}
         >
