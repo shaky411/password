@@ -18,9 +18,9 @@ import securitykey from "../public/security_key.jpg";
 export default function Home() {
   return (
     <main className="flex flex-col items-center justify-center max-w-4xl mx-auto p-6 mb-10">
-      <div className="flex flex-col gap-4 justify-start mr-auto mb-4">
-        <Image priority src={mainImage} width={325} height={300} alt="image" />
-        <div className="">
+      <div className="flex flex-col sm:flex-row gap-4 items-center justify-center mr-auto mb-4">
+        <Image className="" priority src={mainImage} width={325} height={300} alt="image"/>
+        <div className="flex flex-col">
           <h1
             className={`${chakra.className} font-bold text-5xl text-slate-600`}
           >
@@ -29,15 +29,20 @@ export default function Home() {
           <h2 className="mt-2 font-light">
             Create secure passwords and easily copy them to your clipboard.
           </h2>
-        </div>
-        <Link
+
+          <Link
           href="/info"
-          className="border-[#FD735B] text-slate-600 hover:bg-[#FD735B] hover:text-white hover:shadow-md border-2 px-2 py-1 rounded-lg duration-500 text-center w-[100px]"
+          className="border-[#FD735B] text-slate-600 hover:bg-[#FD735B] hover:text-white hover:shadow-md border-2 px-2 py-1 mt-2 rounded-lg duration-500 text-center w-[150px]"
         >
           <FontAwesomeIcon className="mr-1" icon={faInfoCircle} />
           Info
         </Link>
+        </div>
+        
       </div>
+
+      
+
       <Password />
 
       <div className="mt-4 flex flex-col gap-4">
