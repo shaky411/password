@@ -82,23 +82,20 @@ export default function Password() {
   };
 
   const getRandom = (arr) => {
-    let randomIndex = Math.floor(Math.random() * arr.length);
+    const randomValues = new Uint32Array(1);
+    window.crypto.getRandomValues(randomValues);
+    let randomIndex = randomValues[0] % arr.length;
     return arr[randomIndex];
   };
 
   const generatePassword = (options) => {
     const { length, lowerCase, upperCase, numeric, special } = options;
-
     let availableCharacters = [];
 
-    if (lowerCase)
-      availableCharacters = availableCharacters.concat(lowerCasedCharacters);
-    if (upperCase)
-      availableCharacters = availableCharacters.concat(upperCasedCharacters);
-    if (numeric)
-      availableCharacters = availableCharacters.concat(numericCharacters);
-    if (special)
-      availableCharacters = availableCharacters.concat(specialCharacters);
+    if (lowerCase) availableCharacters = availableCharacters.concat(lowerCasedCharacters);
+    if (upperCase) availableCharacters = availableCharacters.concat(upperCasedCharacters);
+    if (numeric) availableCharacters = availableCharacters.concat(numericCharacters);
+    if (special) availableCharacters = availableCharacters.concat(specialCharacters);
 
     if (!lowerCase && !upperCase && !numeric && !special) {
       alert("Please select at least one character type.");
@@ -107,19 +104,18 @@ export default function Password() {
 
     let password = "";
 
-    // Ensure inclusion of at least one character from each category only if multiple options are selected
     if (lowerCase || upperCase || numeric || special) {
       if (lowerCase) password += getRandom(lowerCasedCharacters);
       if (upperCase) password += getRandom(upperCasedCharacters);
       if (numeric) password += getRandom(numericCharacters);
       if (special) password += getRandom(specialCharacters);
 
-      // If only one option is selected, generate remaining characters randomly
       for (let i = password.length; i < length; i++) {
         password += getRandom(availableCharacters);
       }
+
+      password = shuffleString(password);  // Ensure no predictable patterns
     } else {
-      // If only one option is selected, generate the password randomly without ensuring inclusion of characters from all categories
       for (let i = 0; i < length; i++) {
         password += getRandom(availableCharacters);
       }
@@ -183,6 +179,17 @@ export default function Password() {
       default:
         return "bg-slate-100";
     }
+  };
+
+  const shuffleString = (str) => {
+    const arr = str.split('');
+    for (let i = arr.length - 1; i > 0; i--) {
+      const randomValues = new Uint32Array(1);
+      window.crypto.getRandomValues(randomValues);
+      const j = randomValues[0] % (i + 1);
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr.join('');
   };
 
   return (
