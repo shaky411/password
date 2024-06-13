@@ -54,6 +54,10 @@ export default function Home() {
         </p>
       </div>
 
+      <div className="mr-auto">
+        <Managers />
+      </div>
+
       <span className="mr-auto mt-10">My Hardware recommendations:</span>
 
       <div className="flex mt-5 flex-col sm:flex-row justify-center items-center mr-auto gap-10 border p-6 rounded-lg shadow">
@@ -87,9 +91,7 @@ export default function Home() {
         Purchase on Amazon UK
       </Link>
 
-      <div className="mr-auto">
-        <Managers />
-      </div>
+      
 
       <div className="mt-10 mr-auto">
         <span className="mr-2 text-tiny text-slate-400">Site created by</span>
