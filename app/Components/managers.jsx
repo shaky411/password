@@ -40,9 +40,9 @@ export default function Managers() {
         
       </div>
 
-      <div className="flex items-center text-sm text-rose-400">
-        <FontAwesomeIcon className="mr-1" icon={faTriangleExclamation} />
-        <p>For ultimate security, I suggest using the password generators provided with your password manager.</p>
+      <div className="flex items-center justify-center text-sm text-rose-400">
+        
+        <p><FontAwesomeIcon className="mr-1" icon={faTriangleExclamation} /> For ultimate security, I suggest using the password generators provided with your password manager.</p>
         </div>
     </main>
   );
