@@ -51,12 +51,16 @@ export default function Home() {
           Once copied, please save the password in a secure location such as a
           password manager.
         </span>
-        <p className="font-light">
+
+        <div className="bg-violet-500 text-white rounded-lg p-6">
+        <p className="">
           In the digital age, passwords are fundamental to safeguarding your
           online presence and assets. Implementing strong password practices is
           essential for maintaining the integrity, confidentiality, and security
           of your personal and professional life on the internet.
         </p>
+        </div>
+        
       </div>
 
       <div className="mr-auto">
