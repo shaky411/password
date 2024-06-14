@@ -31,7 +31,9 @@ Visit my deployed application here:
 
 [NextJS](https://nextjs.org/)
 
-[Tailwind CSS](https://tailwindcss.com/)   
+[Tailwind CSS](https://tailwindcss.com/)
+
+[NextUI](https://fontawesome.com/)
 
 
 ## Useful Resources
@@ -41,6 +43,8 @@ Visit my deployed application here:
  [React Documentation](https://react.dev/)
  
  [Tailwind CSS Documentation](https://tailwindcss.com/docs/installation)
+
+ [Font Awesome](https://fontawesome.com/)
 
 ## Authors
 
