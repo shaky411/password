@@ -6,6 +6,7 @@ import { faTriangleExclamation } from "@fortawesome/free-solid-svg-icons";
 import Managers from "./Components/managers";
 import Hardware from "./Components/hardware";
 import Hero from "./Components/hero";
+import Open from "./Components/open";
 
 export default function Home() {
   return (
@@ -33,6 +34,8 @@ export default function Home() {
       </div>
 
       <Hardware />
+
+      <Open />
 
       <div className="mt-10 mr-auto">
         <span className="mr-2 text-tiny text-slate-400">
