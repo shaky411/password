@@ -1,7 +1,9 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
-    <main className="flex max-w-4xl mx-auto mb-10 p-6">
-      <div className="mt-10 mr-auto">
+    <main className="flex items-center justify-between max-w-4xl mx-auto mb-10 p-6">
+      <div className="mr-auto">
         <span className="mr-2 text-tiny text-slate-400">
           Site created by <strong>GrayGecko</strong> ©2024
         </span>
@@ -14,6 +16,16 @@ export default function Footer() {
           GrayGecko Web Design
         </Link> */}
       </div>
+
+      <span className="text-tiny text-slate-400">
+        Main hero image created by{" "}
+        <Link
+          href="https://www.freepik.com/"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+        ><strong>Freepik</strong>
+        </Link>
+      </span>
     </main>
   );
 }

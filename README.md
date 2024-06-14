@@ -52,7 +52,7 @@ Visit my deployed application here:
  
 ## Acknowledgments
 
-
+Main hero image created by [Freepik](https://www.freepik.com/)
 
    
 ## Installation
