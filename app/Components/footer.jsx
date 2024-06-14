@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <main className="flex items-center justify-between max-w-4xl mx-auto mb-10 p-6">
-      <div className="mr-auto">
+    <main className="flex flex-col sm:flex-row items-center justify-between max-w-4xl mx-auto mb-10 p-6">
+      <div className="sm:mr-auto">
         <span className="mr-2 text-tiny text-slate-400">
           Site created by <strong>GrayGecko</strong> ©2024
         </span>
