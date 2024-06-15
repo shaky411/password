@@ -5,7 +5,7 @@ import { Checkbox } from "@nextui-org/react";
 import { Input } from "@nextui-org/react";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCopy } from "@fortawesome/free-solid-svg-icons";
+import { faCopy, faTriangleExclamation } from "@fortawesome/free-solid-svg-icons";
 import {
   Modal,
   ModalContent,
@@ -15,6 +15,7 @@ import {
   Button,
   useDisclosure,
 } from "@nextui-org/react";
+import { faApple, faMicrosoft } from "@fortawesome/free-brands-svg-icons";
 
 export default function Password() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -290,11 +291,17 @@ export default function Password() {
                 Password copied to your clipboard.
               </ModalHeader>
               <ModalBody>
-                <p className="bg-yellow-100 p-4 rounded-lg">
+                <p className="bg-gray-100 border p-4 rounded-lg">
                   Your password has been copied to your clipboard. To paste the
-                  password somewhere else, press <strong>CTRL + V</strong> on
-                  your keyboard.
+                  password somewhere else, press <FontAwesomeIcon className="text-slate-500" icon={faMicrosoft} /> <strong>CTRL + V</strong> on
+                  your keyboard or, <FontAwesomeIcon className="text-slate-500" icon={faApple} /> <strong>CMD + V</strong>
                 </p>
+
+                <span className="text-sm text-rose-400 mr-auto mt-2">
+        <FontAwesomeIcon className="mr-1" icon={faTriangleExclamation} />
+        Once copied, please save the password in a secure location such as a
+        password manager.
+      </span>
               </ModalBody>
               <ModalFooter>
                 <Button color="danger" variant="light" onPress={onClose}>
