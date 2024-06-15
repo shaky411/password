@@ -1,11 +1,17 @@
 "use client";
 
+import coffee from "../../assets/bmc-button.png";
+import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Checkbox } from "@nextui-org/react";
 import { Input } from "@nextui-org/react";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCopy, faTriangleExclamation } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCopy,
+  faTriangleExclamation,
+} from "@fortawesome/free-solid-svg-icons";
 import {
   Modal,
   ModalContent,
@@ -93,10 +99,14 @@ export default function Password() {
     const { length, lowerCase, upperCase, numeric, special } = options;
     let availableCharacters = [];
 
-    if (lowerCase) availableCharacters = availableCharacters.concat(lowerCasedCharacters);
-    if (upperCase) availableCharacters = availableCharacters.concat(upperCasedCharacters);
-    if (numeric) availableCharacters = availableCharacters.concat(numericCharacters);
-    if (special) availableCharacters = availableCharacters.concat(specialCharacters);
+    if (lowerCase)
+      availableCharacters = availableCharacters.concat(lowerCasedCharacters);
+    if (upperCase)
+      availableCharacters = availableCharacters.concat(upperCasedCharacters);
+    if (numeric)
+      availableCharacters = availableCharacters.concat(numericCharacters);
+    if (special)
+      availableCharacters = availableCharacters.concat(specialCharacters);
 
     if (!lowerCase && !upperCase && !numeric && !special) {
       alert("Please select at least one character type.");
@@ -115,7 +125,7 @@ export default function Password() {
         password += getRandom(availableCharacters);
       }
 
-      password = shuffleString(password);  // Ensure no predictable patterns
+      password = shuffleString(password); // Ensure no predictable patterns
     } else {
       for (let i = 0; i < length; i++) {
         password += getRandom(availableCharacters);
@@ -183,14 +193,14 @@ export default function Password() {
   };
 
   const shuffleString = (str) => {
-    const arr = str.split('');
+    const arr = str.split("");
     for (let i = arr.length - 1; i > 0; i--) {
       const randomValues = new Uint32Array(1);
       window.crypto.getRandomValues(randomValues);
       const j = randomValues[0] % (i + 1);
       [arr[i], arr[j]] = [arr[j], arr[i]];
     }
-    return arr.join('');
+    return arr.join("");
   };
 
   return (
@@ -293,17 +303,44 @@ export default function Password() {
               <ModalBody>
                 <p className="bg-gray-100 border p-4 rounded-lg">
                   Your password has been copied to your clipboard. To paste the
-                  password somewhere else, press <FontAwesomeIcon className="text-slate-500" icon={faMicrosoft} /> <strong>CTRL + V</strong> on
-                  your keyboard or, <FontAwesomeIcon className="text-slate-500" icon={faApple} /> <strong>CMD + V</strong>
+                  password somewhere else, press{" "}
+                  <FontAwesomeIcon
+                    className="text-slate-500"
+                    icon={faMicrosoft}
+                  />{" "}
+                  <strong>CTRL + V</strong> on your keyboard or,{" "}
+                  <FontAwesomeIcon className="text-slate-500" icon={faApple} />{" "}
+                  <strong>CMD + V</strong>
                 </p>
 
                 <span className="text-sm text-rose-400 mr-auto mt-2">
-        <FontAwesomeIcon className="mr-1" icon={faTriangleExclamation} />
-        Once copied, please save the password in a secure location such as a
-        password manager.
-      </span>
+                  <FontAwesomeIcon
+                    className="mr-1"
+                    icon={faTriangleExclamation}
+                  />
+                  Once copied, please save the password in a secure location
+                  such as a password manager.
+                </span>
+
+                <div className="flex items-center mr-auto">
+                <Link
+                  className="w-fit cursor-pointer"
+                  href="https://buymeacoffee.com/7kqkk5rvsfv"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                >
+                  <Image
+                    src={coffee}
+                    width={200}
+                    height={200}
+                    alt="buy me a coffee logo"
+                  />
+                </Link>
+                
+                </div>
               </ModalBody>
               <ModalFooter>
+                
                 <Button color="danger" variant="light" onPress={onClose}>
                   Close
                 </Button>
