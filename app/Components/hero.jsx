@@ -1,6 +1,7 @@
 import Image from "next/image"
 import mainImage from "../../assets/Image-1.jpg"
 import { chakra } from "../utils/fonts"
+import { monoton } from "../utils/fonts"
 import Link from "next/link"
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,7 +13,7 @@ export default function Hero() {
         <Image className="" priority src={mainImage} width={325} height={300} alt="image"/>
         <div className="flex flex-col">
           <h1
-            className={`${chakra.className} font-bold text-5xl text-slate-600`}
+            className={`${monoton.className} font-bold text-5xl text-slate-600`}
           >
             Password Generator
           </h1>

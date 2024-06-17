@@ -7,14 +7,14 @@ import githubImage from "../../assets/github.png";
 export default function Open() {
   return (
     <main>
-      <div className="flex flex-col sm:flex-row bg-slate-100 p-10 rounded-lg justify-center items-center border gap-5 shadow mt-4">
+      <div className="flex flex-col sm:flex-row bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-300 p-10 rounded-lg justify-center items-center border gap-5 shadow mt-4">
         <Image src={githubImage} width={200} height={200} alt="github logo" />
 
         <div className="sm:w-1/2 flex flex-col gap-4">
           <p>
             I believe in transparency when working with sensitive information
-            which is why I have decided to make this password generator, <strong>open
-            source</strong> .
+            which is why I have decided to make this password generator <strong>open
+            source</strong>.
           </p>
 
           <Link
