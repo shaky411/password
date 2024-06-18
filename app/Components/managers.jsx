@@ -1,6 +1,7 @@
 import Image from "next/image";
 import passwordImage from "../../public/1password.jpg";
 import dashlane from "../../public/dashlane.jpg";
+import nordpass from "../../assets/nordpass.png"
 import Link from "next/link";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -36,6 +37,15 @@ export default function Managers() {
           rel="noopener noreferrer nofollow"
         >
           <Image src={dashlane} width={200} height={200} alt="dashlane logo" />
+        </Link>
+
+        <Link
+          className="hover:scale-110 duration-300 border"
+          href="https://www.nordpass.com/"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+        >
+          <Image src={nordpass} width={200} height={200} alt="dashlane logo" />
         </Link>
         
       </div>

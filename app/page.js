@@ -1,14 +1,11 @@
 import Password from "./Components/password";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTriangleExclamation } from "@fortawesome/free-solid-svg-icons";
 import Managers from "./Components/managers";
 import Hardware from "./Components/hardware";
 import Hero from "./Components/hero";
 import Open from "./Components/open";
 import Strip from "./Components/strip";
-import Link from "next/link";
 
 export default function Home() {
   return (
