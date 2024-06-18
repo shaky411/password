@@ -26,7 +26,7 @@ export default function Managers() {
             src={passwordImage}
             width={200}
             height={200}
-            alt="1 Password Logo"
+            alt="1 Password company logo"
           />
         </Link>
 
@@ -36,7 +36,7 @@ export default function Managers() {
           target="_blank"
           rel="noopener noreferrer nofollow"
         >
-          <Image src={dashlane} width={200} height={200} alt="dashlane logo" />
+          <Image src={dashlane} width={200} height={200} alt="dashlane company logo" />
         </Link>
 
         <Link
@@ -45,7 +45,7 @@ export default function Managers() {
           target="_blank"
           rel="noopener noreferrer nofollow"
         >
-          <Image src={nordpass} width={200} height={200} alt="dashlane logo" />
+          <Image src={nordpass} width={200} height={200} alt="nordpass company logo" />
         </Link>
         
       </div>
