@@ -15,7 +15,7 @@ export const metadata = {
     canonical: "https://www.passwordmanager.org.uk",
   },
   keywords:
-    "password generator, passwords, password, create password, secure, security, free, free tool, secure password, open source, web safety, internet, internet safety, password suggestion generator, password suggestion, password github, github password",
+    "password generator, passwords, password, create password, secure, security, free, free tool, secure password, open source, web safety, internet, internet safety, password suggestion generator, password suggestion, password github, github password, random password, random",
   openGraph: {
     title: "Free to use Password Generator",
     description:
