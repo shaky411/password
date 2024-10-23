@@ -11,7 +11,7 @@ export default function Hero() {
     return (
         <div className="flex flex-col sm:flex-row gap-4 items-center justify-center mr-auto mb-4">
         <Image className="" priority src={mainImage} width={325} height={300} alt="image"/>
-        <div className="flex flex-col">
+        <div className="flex flex-col items-center text-center">
           <h1
             className={`${chakra.className} text-5xl lg:text-7xl text-slate-600`}
           >

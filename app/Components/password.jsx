@@ -323,24 +323,23 @@ export default function Password() {
                 </span>
 
                 <div className="flex items-center mr-auto">
-                <Link
-                  className="w-fit cursor-pointer"
-                  href="https://buymeacoffee.com/7kqkk5rvsfv"
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                >
-                  <Image
-                    src={coffee}
-                    width={200}
-                    height={200}
-                    alt="buy me a coffee logo"
-                  />
-                </Link>
-                
+                  <Link
+                    className="w-fit cursor-pointer"
+                    href="https://buymeacoffee.com/7kqkk5rvsfv"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                  >
+                    <Image
+                      priority
+                      src={coffee}
+                      width={200}
+                      height={200}
+                      alt="buy me a coffee logo"
+                    />
+                  </Link>
                 </div>
               </ModalBody>
               <ModalFooter>
-                
                 <Button color="danger" variant="light" onPress={onClose}>
                   Close
                 </Button>
