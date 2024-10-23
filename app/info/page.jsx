@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function Info() {
   return (
     <main className="flex flex-col items-center justify-center max-w-6xl mx-auto p-10 sm:p-4">
-      <div className="m-10 flex flex-col items-center justify-center gap-4 max-w-3xl text-center">
+      <div className="flex flex-col items-center justify-center gap-4 max-w-3xl text-center">
         <h2 className="text-4xl font-light">Info</h2>
         <p className="font-light">
           Creating secure passwords is crucial for protecting your personal and
