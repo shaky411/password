@@ -6,6 +6,7 @@ import Hardware from "./Components/hardware";
 import Hero from "./Components/hero";
 import Open from "./Components/open";
 import Strip from "./Components/strip";
+import Contact from "./Components/contact";
 
 export default function Home() {
   return (
@@ -21,9 +22,7 @@ export default function Home() {
 
       <Hardware />
       <Open />
+      {/* <Contact /> */}
     </main>
   );
 }
-
-
-
