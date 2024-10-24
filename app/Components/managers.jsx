@@ -6,10 +6,11 @@ import Link from "next/link";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTriangleExclamation } from "@fortawesome/free-solid-svg-icons";
+import { raleway } from "../utils/fonts";
 
 export default function Managers() {
   return (
-    <main className="flex flex-col gap-4 mt-10">
+    <main className={`${raleway.className} flex flex-col gap-4 mt-10`}>
       <div>
         <h2>My Password Manager recommendations:</h2>
       </div>

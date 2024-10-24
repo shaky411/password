@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import Image from "next/image";
 import githubImage from "../../assets/github.png";
-import { space } from "../utils/fonts";
+import { oxygen, space } from "../utils/fonts";
 
 export default function Open() {
   return (
@@ -19,7 +19,7 @@ export default function Open() {
           </p>
 
           <Link
-            className="bg-indigo-500 hover:opacity-40 duration-300 w-full text-center sm:w-fit px-4 py-2 rounded-full text-white mx-auto"
+            className={`${oxygen.className} bg-indigo-500 hover:opacity-40 duration-300 w-full text-center sm:w-fit px-4 py-2 rounded-full text-white mx-auto`}
             href="https://github.com/shaky411/password.git"
             target="_blank"
             rel="noopener noreferrer nofollow"

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { bangers } from "../utils/fonts";
+import { bangers, oxygen } from "../utils/fonts";
 import dayjs from "dayjs";
 
 export default function Navbar() {
@@ -37,14 +37,14 @@ export default function Navbar() {
         >
           Password Generator
         </h1>
-        <span className="text-gray-500">{todaysDate}</span>
+        <span className={`${oxygen.className} text-gray-500`}>{todaysDate}</span>
       </div>
 
       <ul className="hidden md:flex">
         {links.map(({ id, link, href }) => (
           <li
             key={id}
-            className={`nav-links px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 hover:text-white duration-200 link-underline`}
+            className={`${oxygen.className} nav-links px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 hover:text-white duration-200 link-underline`}
           >
             <Link href={href}>{link}</Link>
           </li>
@@ -55,7 +55,7 @@ export default function Navbar() {
         onClick={() => setNav(!nav)}
         className="cursor-pointer pr-4 z-10 text-gray-500 md:hidden"
       >
-        {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
+        {nav ? <FaTimes size={25} /> : <FaBars size={25} />}
       </div>
 
       {nav && (

@@ -1,6 +1,7 @@
 "use client";
 
 import coffee from "../../assets/bmc-button.png";
+import { oxygen } from "../utils/fonts";
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
@@ -204,7 +205,7 @@ export default function Password() {
   };
 
   return (
-    <div className="flex flex-col mt-4 items-start justify-center max-w-4xl w-full border shadow rounded-lg p-4 sm:p-10">
+    <div className={`${oxygen.className} flex flex-col mt-4 items-start justify-center max-w-4xl w-full border shadow rounded-lg p-4 sm:p-10`}>
       <Input
         variant="bordered"
         className="w-full sm:w-1/2 mr-auto"
