@@ -9,6 +9,7 @@ import Strip from "./Components/strip";
 import Contact from "./Components/contact";
 import Email from "./Components/mail";
 
+
 export default function Home() {
   return (
     <main className="flex flex-col items-center justify-center max-w-4xl mx-auto p-6">
@@ -24,6 +25,7 @@ export default function Home() {
       <Hardware />
       <Open />
       <Email/>
+      
       {/* <Contact /> */}
     </main>
   );

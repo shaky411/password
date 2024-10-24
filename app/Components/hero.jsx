@@ -6,6 +6,7 @@ import Link from "next/link"
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
+import { bangers } from "../utils/fonts"
 
 export default function Hero() {
     return (
@@ -13,7 +14,7 @@ export default function Hero() {
         <Image className="" priority src={mainImage} width={325} height={300} alt="image"/>
         <div className="flex flex-col items-center text-center">
           <h1
-            className={`${chakra.className} text-5xl lg:text-7xl text-slate-600`}
+            className={`${bangers.className} text-5xl lg:text-7xl text-slate-600`}
           >
             Password Generator
           </h1>

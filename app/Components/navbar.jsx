@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { chakra, monoton } from "../utils/fonts";
+import { chakra, monoton, bangers } from "../utils/fonts";
 
 export default function Navbar() {
   const [nav, setNav] = useState(false);
@@ -31,7 +31,7 @@ export default function Navbar() {
     <div className="flex justify-between items-center w-full p-7 px-4 text-white bg-gray-700 mb-10 relative z-20">
       <div>
         <h1
-          className={`${chakra.className} text-xl sm:text-4xl text-pink-400 border p-2 rounded-lg border-pink-400 font-signature ml-2`}
+          className={`${bangers.className} text-xl sm:text-4xl text-pink-400 border p-2 rounded-lg border-pink-400 font-signature ml-2`}
         >
           Password Generator
         </h1>
