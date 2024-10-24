@@ -41,7 +41,7 @@ export default function Navbar() {
         {links.map(({ id, link, href }) => (
           <li
             key={id}
-            className="nav-links px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 hover:text-white duration-200 link-underline"
+            className={`nav-links px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 hover:text-white duration-200 link-underline`}
           >
             <Link href={href}>{link}</Link>
           </li>
@@ -60,7 +60,7 @@ export default function Navbar() {
           {links.map(({ id, link, href }) => (
             <li
               key={id}
-              className="px-4 cursor-pointer capitalize py-6 text-3xl"
+              className={`${bangers.className} px-4 cursor-pointer capitalize py-6 text-3xl`}
             >
               <Link onClick={() => setNav(!nav)} href={href}>
                 {link}
