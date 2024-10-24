@@ -12,7 +12,7 @@ export default function Email() {
       <h2 className="text-gray-600 text-3xl">Get in Touch</h2>
       <p className="text-center">For all enquiries, please reach out through the link below.</p>
       <Link
-        className="text-xl sm:text-5xl text-pink-500 bg-white p-5 shadow-inner rounded-xl border w-full text-center"
+        className="text-xl sm:text-5xl text-pink-500 hover:text-pink-800 duration-400 bg-white p-5 shadow-inner rounded-xl border w-full text-center"
         target="_blank"
         rel="noopener noreferrer nofollow"
         href="https://github.com/shaky411"
