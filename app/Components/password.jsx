@@ -205,7 +205,7 @@ export default function Password() {
   };
 
   return (
-    <div className={`${oxygen.className} flex flex-col mt-4 items-start justify-center max-w-4xl w-full border shadow rounded-lg p-4 sm:p-10`}>
+    <div className={`${oxygen.className} flex flex-col mt-4 items-start justify-center max-w-6xl w-full border shadow rounded-lg p-4 sm:p-10`}>
       <Input
         variant="bordered"
         className="w-full sm:w-1/2 mr-auto"

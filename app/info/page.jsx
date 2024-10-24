@@ -9,7 +9,11 @@ export default function Info() {
   return (
     <main className="flex flex-col items-center justify-center max-w-6xl mx-auto p-10 sm:p-4">
       <div className="flex flex-col items-center justify-center gap-4 max-w-3xl text-center">
-        <h2 className={`${bangers.className} text-5xl font-light text-slate-600`}>Info</h2>
+        <h2
+          className={`${bangers.className} text-5xl font-light text-slate-600`}
+        >
+          Info
+        </h2>
         <p className={`${raleway.className} font-light`}>
           Creating secure passwords is crucial for protecting your personal and
           sensitive information. Here are some guidelines and tips to help you
@@ -17,7 +21,9 @@ export default function Info() {
         </p>
       </div>
 
-      <div className={`${raleway.className} grid grid-cols-1 sm:grid-cols-3 gap-7 mt-10`}>
+      <div
+        className={`${raleway.className} grid grid-cols-1 sm:grid-cols-3 gap-7 mt-10`}
+      >
         <div className="col-span-2 sm:col-span-1 p-4 border rounded-lg bg-indigo-500 hover:shadow-lg duration-300 bg-opacity-40 flex flex-col gap-2">
           <span className={`${oxygen.className} font-semibold`}>Length</span>
           <li>
@@ -27,7 +33,9 @@ export default function Info() {
         </div>
 
         <div className="p-4 border rounded-lg bg-green-500 hover:shadow-lg duration-300 bg-opacity-40 flex flex-col gap-2 col-span-2">
-          <span className={`${oxygen.className} font-semibold`}>Complexity</span>
+          <span className={`${oxygen.className} font-semibold`}>
+            Complexity
+          </span>
           <li>
             Mix of character types: Use a combination of uppercase letters,
             lowercase letters, numbers, and special characters (e.g., @, #, $,
@@ -40,7 +48,9 @@ export default function Info() {
         </div>
 
         <div className="p-4 border rounded-lg bg-yellow-500 hover:shadow-lg duration-300 bg-opacity-40 flex flex-col gap-2 col-span-2">
-          <span className={`${oxygen.className} font-semibold`}>Unpredictability</span>
+          <span className={`${oxygen.className} font-semibold`}>
+            Unpredictability
+          </span>
           <li>
             Randomness is key: Use a password generator to create truly random
             passwords.
@@ -52,7 +62,9 @@ export default function Info() {
         </div>
 
         <div className="p-4 border rounded-lg bg-red-500 hover:shadow-lg duration-300 bg-opacity-40 flex flex-col gap-2 sm:col-span-1 col-span-2">
-          <span className={`${oxygen.className} font-semibold`}>Uniqueness</span>
+          <span className={`${oxygen.className} font-semibold`}>
+            Uniqueness
+          </span>
           <li>
             Different for each account: Use a unique password for every account
             to prevent a breach on one site from compromising others.
@@ -60,7 +72,9 @@ export default function Info() {
         </div>
 
         <div className="p-4 border rounded-lg bg-slate-300 hover:shadow-lg duration-300 bg-opacity-40 flex flex-col gap-2 sm:col-span-1 col-span-2">
-          <span className={`${oxygen.className} font-semibold`}>Password Managers</span>
+          <span className={`${oxygen.className} font-semibold`}>
+            Password Managers
+          </span>
           <li>
             Use a password manager: Tools like LastPass, 1Password, or Bitwarden
             can generate, store, and manage your passwords securely. This way,
@@ -69,7 +83,9 @@ export default function Info() {
         </div>
 
         <div className="p-4 border rounded-lg bg-purple-500 hover:shadow-lg duration-300 bg-opacity-40 flex flex-col gap-2 sm:col-span-1 col-span-2">
-          <span className={`${oxygen.className} font-semibold`}>Regular Updates</span>
+          <span className={`${oxygen.className} font-semibold`}>
+            Regular Updates
+          </span>
           <li>
             Change passwords regularly: Especially if you suspect an account has
             been compromised.
@@ -80,19 +96,26 @@ export default function Info() {
           </li>
         </div>
 
-        <div className="p-4 border rounded-lg bg-pink-500 hover:shadow-lg duration-300 bg-opacity-40 flex flex-col gap-2 sm:col-span-1 col-span-2">
+        <div className="p-4 border rounded-lg bg-fuchsia-400 hover:shadow-lg duration-300 bg-opacity-40 flex flex-col gap-2 sm:col-span-1 col-span-2">
           <span className={`${oxygen.className} font-semibold`}>
             Multi-Factor Authentication (MFA)
           </span>
           <li>
-            Use a password manager: Tools like LastPass, 1Password, or Bitwarden
-            can generate, store, and manage your passwords securely. This way,
-            you only need to remember one master password.
+            Multi-factor authentication (MFA) is a security process that
+            requires users to verify their identity using two or more different
+            factors before accessing a system. These factors typically include
+            something the user knows (like a password), something the user has
+            (such as a phone or security token), and something the user is
+            (biometric data like fingerprints or facial recognition). By
+            requiring multiple forms of verification, MFA adds an extra layer of
+            protection against unauthorized access.
           </li>
         </div>
 
-        <div className="p-4 border rounded-lg bg-orange-500 hover:shadow-lg duration-300 bg-opacity-40 flex flex-col gap-2 sm:col-span-3 col-span-2">
-          <span className={`${oxygen.className} font-semibold`}>Examples of Strong Passwords</span>
+        <div className="p-4 border rounded-lg bg-cyan-400 hover:shadow-lg duration-300 bg-opacity-40 flex flex-col gap-2 sm:col-span-3 col-span-2">
+          <span className={`${oxygen.className} font-semibold`}>
+            Examples of Strong Passwords
+          </span>
           <li>
             Randomly generated: <strong>hT7&3z@Q5!mL0xW</strong>
           </li>
@@ -105,8 +128,10 @@ export default function Info() {
           </li>
         </div>
 
-        <div className="p-4 border rounded-lg bg-lime-500 hover:shadow-lg duration-300 bg-opacity-40 flex flex-col gap-2 sm:col-span-1 col-span-2">
-          <span className={`${oxygen.className} font-semibold`}>Bad Practices to Avoid</span>
+        <div className="p-4 border rounded-lg bg-teal-400 hover:shadow-lg duration-300 bg-opacity-40 flex flex-col gap-2 sm:col-span-1 col-span-2">
+          <span className={`${oxygen.className} font-semibold`}>
+            Bad Practices to Avoid
+          </span>
           <li>
             Personal Information: Avoid using easily guessable information like
             your name, birthday, or pet's name.
