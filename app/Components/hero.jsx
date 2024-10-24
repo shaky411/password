@@ -23,12 +23,12 @@ export default function Hero() {
 
           <Link
           href="/info"
-          className="border-[#FD735B] text-slate-600 hover:bg-[#FD735B] hover:text-white hover:shadow-md border-2 px-2 py-1 mt-4 rounded-lg duration-500 text-center w-full sm:w-[150px]"
+          className="border-[#FD735B] text-slate-600 hover:bg-[#FD735B] hover:text-white hover:shadow-md border-2 px-2 py-1 mt-4 rounded-lg duration-500 text-center w-full"
         >
           <FontAwesomeIcon className="mr-1" icon={faInfoCircle} />
           Info
         </Link>
         </div>
       </div>
-    )
+    );
 }
