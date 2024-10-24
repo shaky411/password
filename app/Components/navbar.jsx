@@ -22,7 +22,7 @@ export default function Navbar() {
     },
     {
       id: 3,
-      link: "about",
+      link: "info",
       href: "/info",
     },
   ];
