@@ -32,11 +32,12 @@ export default function Navbar() {
   return (
     <div className="flex justify-between items-center w-full p-7 px-4 text-white bg-gray-700 mb-10 relative z-20">
       <div className="flex items-center gap-4">
-        <h1
+        <Link
+          href="/"
           className={`${bangers.className} text-xl sm:text-4xl text-pink-400 border p-2 rounded-lg border-pink-400 font-signature ml-2`}
         >
           Password Generator
-        </h1>
+        </Link>
         <span className={`${oxygen.className} text-gray-500`}>{todaysDate}</span>
       </div>
 
