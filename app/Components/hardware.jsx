@@ -4,6 +4,7 @@ import Link from "next/link";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { space } from "../utils/fonts";
 
 export default function Hardware() {
   return (
@@ -19,7 +20,7 @@ export default function Hardware() {
             alt="security key image"
           />
 
-          <p className="">
+          <p className={`${space.className}`}>
             Using a two-factor authentication (2FA) security key greatly
             enhances online security by providing robust protection against
             phishing and password theft. Unlike SMS or app-based codes, security

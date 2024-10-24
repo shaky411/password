@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import Image from "next/image";
 import githubImage from "../../assets/github.png";
+import { space } from "../utils/fonts";
 
 export default function Open() {
   return (
@@ -11,7 +12,7 @@ export default function Open() {
         <Image src={githubImage} width={200} height={200} alt="github logo" />
 
         <div className="sm:w-1/2 flex flex-col gap-4">
-          <p>
+          <p className={`${space.className}`}>
             I believe in transparency when working with sensitive information
             which is why I have decided to make this password generator <strong>open
             source</strong>.

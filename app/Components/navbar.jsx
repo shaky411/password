@@ -1,12 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { chakra, monoton, bangers } from "../utils/fonts";
+import { bangers } from "../utils/fonts";
+import dayjs from "dayjs";
 
 export default function Navbar() {
+
+  const todaysDate = dayjs().format('DD-MM-YYYY');
   const [nav, setNav] = useState(false);
 
   const links = [
@@ -29,12 +31,13 @@ export default function Navbar() {
 
   return (
     <div className="flex justify-between items-center w-full p-7 px-4 text-white bg-gray-700 mb-10 relative z-20">
-      <div>
+      <div className="flex items-center gap-4">
         <h1
           className={`${bangers.className} text-xl sm:text-4xl text-pink-400 border p-2 rounded-lg border-pink-400 font-signature ml-2`}
         >
           Password Generator
         </h1>
+        <span className="text-gray-500">{todaysDate}</span>
       </div>
 
       <ul className="hidden md:flex">
