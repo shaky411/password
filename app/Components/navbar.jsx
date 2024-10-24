@@ -18,7 +18,7 @@ export default function Navbar() {
     {
       id: 2,
       link: "contact",
-      href: "/",
+      href: "/#contact",
     },
     {
       id: 3,

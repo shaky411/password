@@ -7,6 +7,7 @@ import Hero from "./Components/hero";
 import Open from "./Components/open";
 import Strip from "./Components/strip";
 import Contact from "./Components/contact";
+import Email from "./Components/mail";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
 
       <Hardware />
       <Open />
+      <Email/>
       {/* <Contact /> */}
     </main>
   );
