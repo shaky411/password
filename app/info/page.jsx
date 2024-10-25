@@ -3,6 +3,7 @@
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { bangers, oxygen, raleway } from "../utils/fonts";
 
+
 import Link from "next/link";
 import { useState } from "react";
 
