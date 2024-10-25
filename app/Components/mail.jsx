@@ -1,9 +1,7 @@
-import { Chakra_Petch } from "next/font/google";
-import { chakra, bangers, space } from "../utils/fonts";
+import { bangers, space } from "../utils/fonts";
 import Link from "next/link";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 export default function Email() {

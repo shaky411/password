@@ -6,9 +6,9 @@ import Hardware from "./Components/hardware";
 import Hero from "./Components/hero";
 import Open from "./Components/open";
 import Strip from "./Components/strip";
-import Contact from "./Components/contact";
-import Email from "./Components/mail";
 import Profile from "./Components/profile";
+import Example from "./Components/example";
+
 
 
 export default function Home() {
@@ -27,8 +27,7 @@ export default function Home() {
       <Open />
       
       <Profile />
-      {/* <Email/> */}
-      {/* <Contact /> */}
+      {/* <Example /> */}
     </main>
   );
 }

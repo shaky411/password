@@ -1,11 +1,15 @@
+"use client"
+
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import { faInfo, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { bangers, oxygen, raleway } from "../utils/fonts";
 
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Info() {
+
+  const [selectedId, setSelectedId] = useState(null);
+
   return (
     <main className="flex flex-col items-center justify-center max-w-6xl mx-auto p-10 sm:p-10">
       <div className="flex flex-col items-center justify-center gap-4 max-w-3xl text-center">

@@ -11,5 +11,5 @@ export const chakra = Chakra_Petch({ subsets: ['latin'], weight: ['400', '300'] 
 export const monoton = Monoton({ subsets: ['latin'], weight: ['400'] });
 export const bangers = Bangers({ subsets: ['latin'], weight: ['400'] });
 export const space = Space_Mono({ subsets: ['latin'], weight: ['400'] });
-export const raleway = Raleway({ subsets: ['latin'], weight: ['400'] });
+export const raleway = Raleway({ subsets: ['latin'], weight: ['400', '600'] });
 export const oxygen = Oxygen({ subsets: ['latin'], weight: ['400', '700'] })

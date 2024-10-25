@@ -1,12 +1,10 @@
 import Image from "next/image"
 import mainImage from "../../assets/Image-1.jpg"
-import { chakra, oxygen, raleway } from "../utils/fonts"
-import { monoton } from "../utils/fonts"
 import Link from "next/link"
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
-import { bangers } from "../utils/fonts"
+import { bangers, raleway, oxygen } from "../utils/fonts"
 
 export default function Hero() {
     return (
