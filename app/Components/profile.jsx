@@ -61,7 +61,7 @@ export default function Profile() {
               rel="noopener noreferrer nofollow"
               href="https://github.com/shaky411"
               id="contact"
-              className={`${space.className} w-full text-center text-3xl rounded-full bg-white shadow-inner border text-pink-500 hover:text-pink-800 duration-400 px-6 py-4`}
+              className={`${space.className} focus:outline-none w-full text-center text-3xl rounded-full bg-white shadow-inner border text-pink-500 hover:text-pink-800 duration-400 px-6 py-4`}
             >
               <FontAwesomeIcon icon={faGithub} className="mr-2" />
               Github
