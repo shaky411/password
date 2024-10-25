@@ -27,6 +27,11 @@ export default function Navbar() {
       link: "info",
       href: "/info",
     },
+    {
+      id: 4,
+      link: "blog",
+      href: "/blog"
+    }
   ];
 
   return (
