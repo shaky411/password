@@ -13,7 +13,7 @@ import Profile from "./Components/profile";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-center max-w-4xl mx-auto p-6">
+    <main className="flex flex-col items-center justify-center max-w-4xl mx-auto p-6 sm:p-10">
       <Hero />
       <Password />
 
