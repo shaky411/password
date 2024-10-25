@@ -8,6 +8,7 @@ import Open from "./Components/open";
 import Strip from "./Components/strip";
 import Contact from "./Components/contact";
 import Email from "./Components/mail";
+import Profile from "./Components/profile";
 
 
 export default function Home() {
@@ -24,8 +25,9 @@ export default function Home() {
 
       <Hardware />
       <Open />
-      <Email/>
       
+      <Profile />
+      {/* <Email/> */}
       {/* <Contact /> */}
     </main>
   );
