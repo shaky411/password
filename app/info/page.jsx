@@ -76,7 +76,7 @@ export default function Info() {
           </li>
         </div>
 
-        <div className="p-4 border rounded-lg bg-slate-300 hover:shadow-lg duration-300 bg-opacity-40 flex flex-col gap-2 sm:col-span-1 col-span-2">
+        <div className="p-4 border rounded-lg bg-slate-300 hover:shadow-lg duration-300 bg-opacity-40 flex flex-col gap-2 sm:col-span-3 md:col-span-1 lg:col-span-1 col-span-2">
           <span className={`${oxygen.className} font-semibold`}>
             Password Managers
           </span>
@@ -87,7 +87,7 @@ export default function Info() {
           </li>
         </div>
 
-        <div className="p-4 border rounded-lg bg-purple-500 hover:shadow-lg duration-300 bg-opacity-40 flex flex-col gap-2 sm:col-span-1 col-span-2">
+        <div className="p-4 border rounded-lg bg-purple-500 hover:shadow-lg duration-300 bg-opacity-40 flex flex-col gap-2 sm:col-span-3 md:col-span-2 lg:col-span-1 col-span-2">
           <span className={`${oxygen.className} font-semibold`}>
             Regular Updates
           </span>
@@ -101,7 +101,7 @@ export default function Info() {
           </li>
         </div>
 
-        <div className="p-4 border rounded-lg bg-fuchsia-400 hover:shadow-lg duration-300 bg-opacity-40 flex flex-col gap-2 sm:col-span-1 col-span-2">
+        <div className="p-4 border rounded-lg bg-fuchsia-400 hover:shadow-lg duration-300 bg-opacity-40 flex flex-col gap-2 sm:col-span-3 md:col-span-3 lg:col-span-1 col-span-2">
           <span className={`${oxygen.className} font-semibold`}>
             Multi-Factor Authentication (MFA)
           </span>
@@ -133,7 +133,7 @@ export default function Info() {
           </li>
         </div>
 
-        <div className="p-4 border rounded-lg bg-teal-400 hover:shadow-lg duration-300 bg-opacity-40 flex flex-col gap-2 sm:col-span-1 col-span-2">
+        <div className="p-4 border rounded-lg bg-teal-400 hover:shadow-lg duration-300 bg-opacity-40 flex flex-col gap-2 sm:col-span-3 lg:col-span-1 col-span-2">
           <span className={`${oxygen.className} font-semibold`}>
             Bad Practices to Avoid
           </span>
@@ -147,7 +147,7 @@ export default function Info() {
           </li>
         </div>
 
-        <div className="p-4 border rounded-lg bg-slate-200 hover:shadow-lg duration-300 bg-opacity-40 flex flex-col gap-2 sm:col-span-2 col-span-2">
+        <div className="p-4 border rounded-lg bg-slate-200 hover:shadow-lg duration-300 bg-opacity-40 flex flex-col gap-2 sm:col-span-3 lg:col-span-2 col-span-2">
           <span className={`${oxygen.className} font-semibold`}>Hardware</span>
           <p>
             Using a two-factor authentication (2FA) security key greatly

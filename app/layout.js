@@ -55,12 +55,12 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
       <meta name="google-adsense-account" content="ca-pub-6386565516888254" />
-      {/* <Script
+      <Script
           strategy="afterInteractive"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
           data-ad-client="ca-pub-6386565516888254"
           async
-        /> */}
+        />
       </head>
       {/* <Navbar /> */}
       <body className={inter.className}>
