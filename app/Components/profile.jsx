@@ -15,7 +15,7 @@ import { Moon_Dance } from "next/font/google";
 
 export default function Profile() {
   return (
-    <main className="" id="contact">
+    <main>
       <div className="max-w-5xl w-full mt-4 flex flex-col md:flex-row gap-10">
         <div className="max-w-5xl w-full bg-white shadow-lg rounded-lg text-gray-900">
           <div className="rounded-t-lg h-52 overflow-hidden">
@@ -25,7 +25,7 @@ export default function Profile() {
               className="object-top border rounded-t-lg"
             />
           </div>
-          <div className="mx-auto w-36 h-36 relative -mt-16 border-4 border-white rounded-full overflow-hidden">
+          <div className="mx-auto w-40 h-40 relative -mt-16 border-4 border-white rounded-full overflow-hidden">
             <Image src={profileImage} alt="profile image" />
           </div>
 
@@ -57,6 +57,7 @@ export default function Profile() {
               target="_blank"
               rel="noopener noreferrer nofollow"
               href="https://github.com/shaky411"
+              id="contact"
               className={`${space.className} w-full text-center text-3xl rounded-full bg-white shadow-inner border text-pink-500 hover:text-pink-800 duration-400 px-6 py-4`}
             >
               <FontAwesomeIcon icon={faGithub} className="mr-2" />
