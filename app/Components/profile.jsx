@@ -20,13 +20,14 @@ export default function Profile() {
         <div className="max-w-5xl w-full bg-white shadow-lg rounded-lg text-gray-900">
           <div className="rounded-t-lg h-52 overflow-hidden">
             <Image
+            priority
               src={profileBackground}
               alt="misty forest image"
               className="object-top border rounded-t-lg"
             />
           </div>
           <div className="mx-auto w-40 h-40 relative -mt-16 border-4 border-white rounded-full overflow-hidden">
-            <Image src={profileImage} alt="profile image" />
+            <Image src={profileImage} alt="profile image" priority />
           </div>
 
           <div className="text-center mt-2">
@@ -39,7 +40,9 @@ export default function Profile() {
           </div>
 
           <div>
-            <p className={`${raleway.className} px-10 py-5 text-center text-lg`}>
+            <p
+              className={`${raleway.className} px-10 py-5 text-center text-lg`}
+            >
               Junior web developer passionate about front-end design and
               development. Proud father of two beautiful daughters and husband
               to a wonderful wife. When I’m not coding, you’ll find me catching
