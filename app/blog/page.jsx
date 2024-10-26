@@ -9,17 +9,21 @@ async function fetchPosts() {
       revalidate: 1,
     },
   });
+
   if (!res.ok) {
     throw new Error("Failed to fetch posts");
   }
+
   const data = await res.json();
-  return data;
+  console.log("Fetched posts data:", data); // Log the data to confirm it's an array
+  return Array.isArray(data) ? data : []; // Ensure we return an array even if data is undefined
 }
 
 export default async function Blog() {
   const posts = await fetchPosts();
 
-  if (!posts || posts.length === 0) {
+  // Check that posts array exists and contains elements
+  if (!Array.isArray(posts) || posts.length === 0) {
     return <p>No posts available</p>;
   }
 
@@ -31,14 +35,11 @@ export default async function Blog() {
     <main className="flex flex-col items-center justify-center max-w-5xl mx-auto p-10 sm:p-10">
       <div className="flex flex-col items-center justify-between gap-4 text-center">
         <div>
-          <h2
-            className={`${bangers.className} text-5xl font-light text-slate-600`}
-          >
+          <h2 className={`${bangers.className} text-5xl font-light text-slate-600`}>
             Blog
           </h2>
           <p className={`${raleway.className} font-light mt-4 mb-10`}>
-            Follow along as I share insights on what I'm learning, the waves I'm
-            catching, and the paths I'm navigating.
+            Follow along as I share insights on what I'm learning, the waves I'm catching, and the paths I'm navigating.
           </p>
         </div>
 
@@ -58,9 +59,7 @@ export default async function Blog() {
             </h2>
             <span className="text-tiny text-gray-400 mt-2">{firstPost.date}</span>
             <p className={`${raleway.className} mt-4 mb-4 text-md`}>
-              {firstPost.content && typeof firstPost.content === "string"
-                ? firstPost.content.slice(0, 100)
-                : ""}...
+              {typeof firstPost.content === "string" ? firstPost.content.slice(0, 100) : "Content not available"}...
             </p>
             <Link
               className={`${oxygen.className} rounded border-2 py-2 px-4 border-pink-400 hover:bg-slate-100 duration-400`}
@@ -86,9 +85,7 @@ export default async function Blog() {
                     {post.title}
                   </h2>
                   <p className={`${raleway.className}`}>
-                    {post.content && typeof post.content === "string"
-                      ? post.content.slice(0, 100)
-                      : ""}...
+                    {typeof post.content === "string" ? post.content.slice(0, 100) : "Content not available"}...
                   </p>
                   <Link
                     className={`${oxygen.className} rounded pointer-events-none border-2 py-2 px-4 border-pink-400 hover:bg-slate-100 duration-400`}
