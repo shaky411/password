@@ -301,12 +301,6 @@ export default function Password() {
           </button>
         </div>
 
-      {/* <button
-        onClick={handleGeneratePassword}
-        className="bg-[#FD735B] text-white px-4 py-2 rounded-lg mt-4 w-full hover:opacity-45 duration-500 font-semibold"
-      >
-        Generate Password
-      </button> */}
 
       <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
         <ModalContent>
