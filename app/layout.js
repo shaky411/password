@@ -63,6 +63,8 @@ export default function RootLayout({ children }) {
         />
       </head>
       {/* <Navbar /> */}
+
+      
       <body className={inter.className}>
         <Navbar />
         {children}
