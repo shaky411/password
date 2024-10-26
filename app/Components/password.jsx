@@ -287,12 +287,26 @@ export default function Password() {
         </span>
       </div>
 
-      <button
+
+      <div className="mx-auto mt-4 w-full">
+          <button
+          onClick={handleGeneratePassword}
+            className={`${oxygen.className} text-center font-semibold relative inline-block group py-2 px-3 w-full`}
+          >
+            <span className="absolute inset-0 w-full h-full transition duration-500 ease-out transform translate-x-1 translate-y-1 bg-orange-800 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+            <span className="absolute inset-0 w-full h-full bg-[#FD735B] border border-orange-800 group-hover:bg-orange-300"></span>
+            <span className="relative text-white">
+              Generate Password
+            </span>
+          </button>
+        </div>
+
+      {/* <button
         onClick={handleGeneratePassword}
         className="bg-[#FD735B] text-white px-4 py-2 rounded-lg mt-4 w-full hover:opacity-45 duration-500 font-semibold"
       >
         Generate Password
-      </button>
+      </button> */}
 
       <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
         <ModalContent>
