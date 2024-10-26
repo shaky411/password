@@ -1,10 +1,7 @@
-import { NextResponse } from 'next/server'
+import posts from "../../data/posts"
 
-export async function GET() {
-  const res = await fetch('https://dummyjson.com/posts', {
-    next: { revalidate: 60 },
+export async function GET(request) {
+  return new Response(JSON.stringify(posts), {
+    headers: { 'Content-Type': 'application/json' },
   });
-  const data = await res.json();
- 
-  return NextResponse.json(data);
 }
