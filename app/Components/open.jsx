@@ -14,18 +14,22 @@ export default function Open() {
         <div className="sm:w-1/2 flex flex-col gap-4">
           <p className={`${space.className}`}>
             I believe in transparency when working with sensitive information
-            which is why I have decided to make this password generator <strong>open
-            source</strong>.
+            which is why I have decided to make this password generator{" "}
+            <strong>open source</strong>.
           </p>
 
-          <Link
-            className={`${oxygen.className} bg-indigo-500 hover:opacity-40 duration-300 w-full text-center sm:w-fit px-4 py-2 rounded-full text-white mx-auto`}
-            href="https://github.com/shaky411/password.git"
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-          >
-            View Code
-          </Link>
+          <div className="mx-auto w-full sm:w-fit">
+            <Link
+              href="https://github.com/shaky411/password.git"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              className={`${oxygen.className} text-center relative inline-block group py-2 px-3 w-full`}
+            >
+              <span className="absolute inset-0 w-full h-full transition duration-500 ease-out transform translate-x-1 translate-y-1 bg-indigo-800 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+              <span className="absolute inset-0 w-full h-full bg-indigo-500 border border-indigo-800 group-hover:bg-indigo-400"></span>
+              <span className="relative text-white ">View Code</span>
+            </Link>
+          </div>
         </div>
       </div>
     </main>

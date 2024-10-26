@@ -35,11 +35,14 @@ export default async function Blog() {
     <main className="flex flex-col items-center justify-center max-w-5xl mx-auto p-10 sm:p-10">
       <div className="flex flex-col items-center justify-between gap-4 text-center">
         <div>
-          <h2 className={`${bangers.className} text-5xl font-light text-slate-600`}>
+          <h2
+            className={`${bangers.className} text-5xl font-light text-slate-600`}
+          >
             Blog
           </h2>
           <p className={`${raleway.className} font-light mt-4 mb-10`}>
-            Follow along as I share insights on what I'm learning, the waves I'm catching, and the paths I'm navigating.
+            Follow along as I share insights on what I'm learning, the waves I'm
+            catching, and the paths I'm navigating.
           </p>
         </div>
 
@@ -57,16 +60,35 @@ export default async function Blog() {
             <h2 className={`${raleway.className} text-gray-600 text-3xl`}>
               {firstPost.title}
             </h2>
-            <span className="text-tiny text-gray-400 mt-2">{firstPost.date}</span>
+            <span className="text-tiny text-gray-400 mt-2">
+              {firstPost.date}
+            </span>
             <p className={`${raleway.className} mt-4 mb-4 text-md`}>
-              {typeof firstPost.content === "string" ? firstPost.content.slice(0, 100) : "Content not available"}...
+              {typeof firstPost.content === "string"
+                ? firstPost.content.slice(0, 100)
+                : "Content not available"}
+              ...
             </p>
-            <Link
+
+            <div className="mx-auto">
+              <Link
+                href={`/blog/${firstPost.id}`}
+                className={`${oxygen.className} relative inline-block group py-2 px-3`}
+              >
+                <span className="absolute inset-0 w-full h-full transition duration-500 ease-out transform translate-x-1 translate-y-1 bg-pink-500 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+                <span className="absolute inset-0 w-full h-full bg-white border border-pink-500 group-hover:bg-pink-50"></span>
+                <span className="relative text-pink-500 ">
+                  Continue reading
+                </span>
+              </Link>
+            </div>
+
+            {/* <Link
               className={`${oxygen.className} rounded border-2 py-2 px-4 border-pink-400 hover:bg-slate-100 duration-400`}
               href={`/blog/${firstPost.id}`}
             >
               Continue Reading
-            </Link>
+            </Link> */}
           </section>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -85,14 +107,23 @@ export default async function Blog() {
                     {post.title}
                   </h2>
                   <p className={`${raleway.className}`}>
-                    {typeof post.content === "string" ? post.content.slice(0, 100) : "Content not available"}...
+                    {typeof post.content === "string"
+                      ? post.content.slice(0, 100)
+                      : "Content not available"}
+                    ...
                   </p>
-                  <Link
-                    className={`${oxygen.className} rounded pointer-events-none border-2 py-2 px-4 border-pink-400 hover:bg-slate-100 duration-400`}
-                    href={`/blog/${post.id}`}
-                  >
-                    Coming soon!
-                  </Link>
+                  <div className="mx-auto">
+                    <Link
+                      href={`/blog/${firstPost.id}`}
+                      className={`${oxygen.className} relative inline-block group py-2 px-3 pointer-events-none`}
+                    >
+                      <span className="absolute inset-0 w-full h-full transition duration-500 ease-out transform translate-x-1 translate-y-1 bg-pink-500 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+                      <span className="absolute inset-0 w-full h-full bg-white border border-pink-500 group-hover:bg-pink-50"></span>
+                      <span className="relative text-pink-500 ">
+                        Coming soon!
+                      </span>
+                    </Link>
+                  </div>
                 </li>
               </ul>
             ))}

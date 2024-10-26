@@ -5,7 +5,7 @@ import profileBackground from "../../assets/profile_background.jpg";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { bangers, raleway, space } from "../utils/fonts";
+import { bangers, oxygen, raleway, space } from "../utils/fonts";
 
 export default function Profile() {
   return (
@@ -35,9 +35,9 @@ export default function Profile() {
             </p>
           </div>
 
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col px-10 pt-4 pb-8 gap-4">
             <p
-              className={`${raleway.className} px-10 pt-5 text-center text-lg`}
+              className={`${raleway.className} sm:px-10 text-center text-lg`}
             >
               Junior web developer passionate about front-end design and
               development. Proud father of two beautiful daughters and husband
@@ -46,10 +46,16 @@ export default function Profile() {
               the latest tech trends.
             </p>
 
-            <Link
-            className="mb-4 mx-auto bg-gray-500 hover:bg-gray-700 duration-400 py-2 px-4 rounded text-gray-200"
-            href="/blog"
-            >Read my Blog</Link>
+            <div className="mx-auto w-full sm:w-fit">
+              <Link
+                href="/blog"
+                className={`${oxygen.className} text-center relative inline-block group py-2 px-3 w-full`}
+              >
+                <span className="absolute inset-0 w-full h-full transition duration-500 ease-out transform translate-x-1 translate-y-1 bg-gray-900 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+                <span className="absolute inset-0 w-full h-full bg-gray-500 border border-gray-900 group-hover:bg-gray-400"></span>
+                <span className="relative text-white">Read my Blog</span>
+              </Link>
+            </div>
           </div>
 
           <div className="p-10 bg-gray-200 text-slate-900 rounded-b-lg mt-2 flex flex-col gap-4 items-center justify-center">

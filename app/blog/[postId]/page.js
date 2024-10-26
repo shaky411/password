@@ -76,12 +76,16 @@ export default async function PostPage({ params }) {
 
       </div> */}
 
-      <Link
-        className={`${oxygen.className} mt-4 mr-auto bg-gray-400 hover:opacity-50 duration-400 px-4 py-2 text-white rounded`}
-        href="/blog"
-      >
-        &larr; Back
-      </Link>
+      <div className="mt-4 mr-auto">
+        <Link
+          href="/blog"
+          class="relative inline-block font-medium group py-1.5 px-2.5 "
+        >
+          <span class="absolute inset-0 w-full h-full transition duration-500 ease-out transform translate-x-1 translate-y-1 bg-indigo-500 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+          <span class="absolute inset-0 w-full h-full bg-white border border-indigo-600 group-hover:bg-indigo-50"></span>
+          <span class="relative text-indigo-600 ">&larr; back</span>
+        </Link>
+      </div>
     </main>
   );
 }
