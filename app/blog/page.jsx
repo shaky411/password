@@ -19,6 +19,10 @@ async function fetchPosts() {
 export default async function Blog() {
   const posts = await fetchPosts();
 
+  if (!posts || posts.length === 0) {
+    return <p>No posts available</p>;
+  }
+
   // Separate the first post and the remaining posts
   const firstPost = posts[0];
   const remainingPosts = posts.slice(1);
@@ -54,7 +58,9 @@ export default async function Blog() {
             </h2>
             <span className="text-tiny text-gray-400 mt-2">{firstPost.date}</span>
             <p className={`${raleway.className} mt-4 mb-4 text-md`}>
-              {firstPost.content.slice(0, 100)}...
+              {firstPost.content && typeof firstPost.content === "string"
+                ? firstPost.content.slice(0, 100)
+                : ""}...
             </p>
             <Link
               className={`${oxygen.className} rounded border-2 py-2 px-4 border-pink-400 hover:bg-slate-100 duration-400`}
@@ -67,10 +73,7 @@ export default async function Blog() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {remainingPosts.map((post) => (
               <ul key={post.id}>
-                <li
-                  className="flex flex-col items-center justify-center gap-4"
-                  // key={post.id}
-                >
+                <li className="flex flex-col items-center justify-center gap-4">
                   <Image
                     priority
                     className="w-full opacity-25"
@@ -82,7 +85,11 @@ export default async function Blog() {
                   <h2 className={`${raleway.className} text-gray-600 text-3xl`}>
                     {post.title}
                   </h2>
-                  <p className={`${raleway.className}`}>{post.content.slice(0, 100)}...</p>
+                  <p className={`${raleway.className}`}>
+                    {post.content && typeof post.content === "string"
+                      ? post.content.slice(0, 100)
+                      : ""}...
+                  </p>
                   <Link
                     className={`${oxygen.className} rounded pointer-events-none border-2 py-2 px-4 border-pink-400 hover:bg-slate-100 duration-400`}
                     href={`/blog/${post.id}`}
@@ -95,16 +102,6 @@ export default async function Blog() {
           </div>
         </div>
       </div>
-
-      {/* I want to have an image, blog title, blog subtitle, the body text, date time and posted by. I also want to have a like counter. On the individual id page I want a share story option */}
-      {/* Next iteration will have a comments field */}
-
-      {/* <Link
-        className={`${oxygen.className} my-10 mr-auto bg-blue-500 hover:opacity-50 duration-400 px-4 py-2 text-white rounded`}
-        href="/"
-      >
-        &larr; Back
-      </Link> */}
     </main>
   );
 }
