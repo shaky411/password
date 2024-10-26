@@ -20,7 +20,7 @@ export default async function PostPage({ params }) {
   }
 
   return (
-    <main className="flex flex-col gap-4 justify-start max-w-6xl mx-auto p-10 sm:p-10 h-screen">
+    <main className="flex flex-col gap-4 justify-start max-w-6xl mx-auto p-10 sm:p-10 min-h-screen">
       <Image
         priority
         className="rounded-md w-full"
