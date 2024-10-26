@@ -4,7 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInfoCircle, faShare, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
+import {
+  faInfoCircle,
+  faShare,
+  faThumbsUp,
+} from "@fortawesome/free-solid-svg-icons";
 
 async function getPost(postId) {
   const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/posts`);
@@ -38,14 +42,22 @@ export default async function PostPage({ params }) {
         <h2 className={`${raleway.className} text-2xl sm:text-4xl`}>
           {post.title}
         </h2>
-        <span className={`${raleway.className} text-gray-700`}>{post.subtitle}</span>
+        <span className={`${raleway.className} text-gray-700`}>
+          {post.subtitle}
+        </span>
       </div>
 
       <span className="text-sm text-gray-400">
         {post.date} - {post.author}
       </span>
 
-      <p className={`${raleway.className}`}>{post.content}</p>
+      <div className={`${raleway.className} space-y-4`}>
+        {post.content.split("\n").map((paragraph, index) => (
+          <p key={index} className="text-base leading-relaxed">
+            {paragraph}
+          </p>
+        ))}
+      </div>
 
       {/* <div className="flex gap-4">
       <div className="border w-fit px-2 py-1 rounded shadow">
@@ -63,8 +75,6 @@ export default async function PostPage({ params }) {
       </div>
 
       </div> */}
-
-      
 
       <Link
         className={`${oxygen.className} mt-4 mr-auto bg-gray-400 hover:opacity-50 duration-400 px-4 py-2 text-white rounded`}
