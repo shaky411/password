@@ -35,9 +35,9 @@ export default function Profile() {
             </p>
           </div>
 
-          <div>
+          <div className="flex flex-col gap-4">
             <p
-              className={`${raleway.className} px-10 py-5 text-center text-lg`}
+              className={`${raleway.className} px-10 pt-5 text-center text-lg`}
             >
               Junior web developer passionate about front-end design and
               development. Proud father of two beautiful daughters and husband
@@ -45,6 +45,11 @@ export default function Profile() {
               waves, exploring country trails with the family, or diving into
               the latest tech trends.
             </p>
+
+            <Link
+            className="mb-4 mx-auto bg-gray-500 hover:bg-gray-700 duration-400 py-2 px-4 rounded text-gray-200"
+            href="/blog"
+            >Read my Blog</Link>
           </div>
 
           <div className="p-10 bg-gray-200 text-slate-900 rounded-b-lg mt-2 flex flex-col gap-4 items-center justify-center">
