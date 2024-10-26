@@ -7,7 +7,7 @@ import Hero from "./Components/hero";
 import Open from "./Components/open";
 import Strip from "./Components/strip";
 import Profile from "./Components/profile";
-import Example from "./Components/example";
+
 
 
 
