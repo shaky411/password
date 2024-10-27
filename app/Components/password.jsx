@@ -205,7 +205,9 @@ export default function Password() {
   };
 
   return (
-    <div className={`${oxygen.className} flex flex-col mt-4 items-start justify-center max-w-6xl w-full border shadow rounded-lg p-4 sm:p-10`}>
+    <div
+      className={`${oxygen.className} flex flex-col mt-4 items-start justify-center max-w-6xl w-full border shadow rounded-lg p-4 sm:p-10`}
+    >
       <Input
         variant="bordered"
         className="w-full sm:w-1/2 mr-auto"
@@ -266,11 +268,20 @@ export default function Password() {
 
         <button
           onClick={handleCopyPassword}
+          className={`${oxygen.className} text-center font-semibold relative inline-block group py-2 px-3`}
+        >
+          <span className="absolute inset-0 w-full h-full transition duration-500 ease-out transform translate-x-1 translate-y-1 bg-orange-800 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+          <span className="absolute inset-0 w-full h-full bg-white border border-orange-800 group-hover:bg-orange-100"></span>
+          <span className="relative text-[#FD735B]"><FontAwesomeIcon icon={faCopy}/></span>
+        </button>
+
+        {/* <button
+          onClick={handleCopyPassword}
           disabled={!generatedPassword}
           className="bg-slate-500 text-white px-4 py-2 rounded-lg ml-auto hover:opacity-45 duration-500 text-sm"
         >
           <FontAwesomeIcon className="" icon={faCopy} />
-        </button>
+        </button> */}
       </div>
 
       <div className="mt-4 w-full text-center">
@@ -287,20 +298,16 @@ export default function Password() {
         </span>
       </div>
 
-
       <div className="mx-auto mt-4 w-full">
-          <button
+        <button
           onClick={handleGeneratePassword}
-            className={`${oxygen.className} text-center font-semibold relative inline-block group py-2 px-3 w-full`}
-          >
-            <span className="absolute inset-0 w-full h-full transition duration-500 ease-out transform translate-x-1 translate-y-1 bg-orange-800 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
-            <span className="absolute inset-0 w-full h-full bg-[#FD735B] border border-orange-800 group-hover:bg-orange-300"></span>
-            <span className="relative text-white">
-              Generate Password
-            </span>
-          </button>
-        </div>
-
+          className={`${oxygen.className} text-center font-semibold relative inline-block group py-2 px-3 w-full`}
+        >
+          <span className="absolute inset-0 w-full h-full transition duration-500 ease-out transform translate-x-1 translate-y-1 bg-orange-800 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+          <span className="absolute inset-0 w-full h-full bg-[#FD735B] border border-orange-800 group-hover:bg-orange-300"></span>
+          <span className="relative text-white">Generate Password</span>
+        </button>
+      </div>
 
       <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
         <ModalContent>

@@ -19,7 +19,7 @@ export default function Hero() {
       />
       <div className="flex flex-col items-center text-center">
         <h1
-          className={`${bangers.className} text-5xl md:text-7xl lg:text-8xl text-slate-600 drop-shadow-md`}
+          className={`${bangers.className} text-4xl md:text-7xl lg:text-8xl text-slate-600 drop-shadow-md`}
         >
           Password Generator
         </h1>

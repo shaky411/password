@@ -2,6 +2,7 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import { bangers, oxygen, raleway } from "../utils/fonts";
 import Link from "next/link";
 import Image from "next/image";
+import NewsletterForm from "../Components/newsForm";
 
 async function fetchPosts() {
   const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/posts`, {
@@ -40,7 +41,7 @@ export default async function Blog() {
           >
             Blog
           </h2>
-          <p className={`${raleway.className} font-light mt-4 mb-10`}>
+          <p className={`${raleway.className} font-light mt-4`}>
             Follow along as I share insights on what I'm learning, the waves I'm
             catching, and the paths I'm navigating.
           </p>
@@ -130,6 +131,8 @@ export default async function Blog() {
           </div>
         </div>
       </div>
+
+      {/* <NewsletterForm /> */}
     </main>
   );
 }

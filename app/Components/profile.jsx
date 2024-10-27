@@ -53,7 +53,7 @@ export default function Profile() {
               >
                 <span className="absolute inset-0 w-full h-full transition duration-500 ease-out transform translate-x-1 translate-y-1 bg-gray-900 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
                 <span className="absolute inset-0 w-full h-full bg-gray-500 border border-gray-900 group-hover:bg-gray-400"></span>
-                <span className="relative text-white">Read my Blog</span>
+                <span className="relative text-white">Read my blog &rarr;</span>
               </Link>
             </div>
           </div>
