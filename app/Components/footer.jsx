@@ -3,14 +3,24 @@ import dayjs from "dayjs";
 import { oxygen } from "../utils/fonts";
 
 export default function Footer() {
-
-  const currentYear = dayjs().format('YYYY');
+  const currentYear = dayjs().format("YYYY");
 
   return (
-    <main className={`${oxygen.className} flex flex-col sm:flex-row items-center justify-between max-w-6xl mx-auto mb-10 p-6`}>
+    <main
+      className={`${oxygen.className} flex flex-col sm:flex-row items-center justify-between max-w-6xl mx-auto mb-10 p-6`}
+    >
       <div className="sm:mr-auto">
         <span className="mr-2 text-tiny text-slate-400">
-          Site created by <strong>GrayGecko</strong> &copy; {currentYear}
+          Site powered by{" "}
+          <Link
+          className="font-semibold"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            href="https://nextjs.org/"
+          >
+            NextJS
+          </Link>{" "}
+          &copy; {currentYear}
         </span>
         {/* <Link
           className="bg-slate-100 hover:opacity-40 duration-300 px-4 py-2 mr-auto mt-4 rounded-full border text-sm font-semibold text-blue-500"

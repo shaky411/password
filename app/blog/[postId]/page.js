@@ -9,6 +9,7 @@ import {
   faShare,
   faThumbsUp,
 } from "@fortawesome/free-solid-svg-icons";
+import { faMedium } from "@fortawesome/free-brands-svg-icons";
 
 async function getPost(postId) {
   const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/posts`);
@@ -57,8 +58,18 @@ export default async function PostPage({ params }) {
             {paragraph}
           </p>
         ))}
+
+        
       </div>
 
+      <Link
+      className="text-gray-500 hover:text-gray-900 duration-300 w-fit"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+          href="https://medium.com/@shaky411/tackling-the-tide-28558b6d31c6"
+        >
+          <FontAwesomeIcon size="xl" icon={faMedium} />
+        </Link>
       {/* <div className="flex gap-4">
       <div className="border w-fit px-2 py-1 rounded shadow">
         <button className="mr-2 text-gray-500">
