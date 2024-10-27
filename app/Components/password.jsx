@@ -1,7 +1,7 @@
 "use client";
 
 import coffee from "../../assets/bmc-button.png";
-import { oxygen } from "../utils/fonts";
+import { oxygen, raleway } from "../utils/fonts";
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
@@ -272,7 +272,9 @@ export default function Password() {
         >
           <span className="absolute inset-0 w-full h-full transition duration-500 ease-out transform translate-x-1 translate-y-1 bg-orange-800 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
           <span className="absolute inset-0 w-full h-full bg-white border border-orange-800 group-hover:bg-orange-100"></span>
-          <span className="relative text-[#FD735B]"><FontAwesomeIcon icon={faCopy}/></span>
+          <span className="relative text-[#FD735B]">
+            <FontAwesomeIcon icon={faCopy} />
+          </span>
         </button>
 
         {/* <button
@@ -313,11 +315,15 @@ export default function Password() {
         <ModalContent>
           {(onClose) => (
             <>
-              <ModalHeader className="flex flex-col gap-1">
+              <ModalHeader
+                className={`${raleway.className} flex flex-col gap-1`}
+              >
                 Password copied to your clipboard.
               </ModalHeader>
               <ModalBody>
-                <p className="bg-gray-100 border p-4 rounded-lg">
+                <p
+                  className={`${raleway.className} bg-gray-100 border p-4 rounded-lg`}
+                >
                   Your password has been copied to your clipboard. To paste the
                   password somewhere else, press{" "}
                   <FontAwesomeIcon
@@ -329,7 +335,9 @@ export default function Password() {
                   <strong>CMD + V</strong>
                 </p>
 
-                <span className="text-sm text-rose-400 mr-auto mt-2">
+                <span
+                  className={`${oxygen.className} text-sm text-rose-400 mr-auto mt-2`}
+                >
                   <FontAwesomeIcon
                     className="mr-1"
                     icon={faTriangleExclamation}
@@ -356,6 +364,17 @@ export default function Password() {
                 </div>
               </ModalBody>
               <ModalFooter>
+                {/* <div className="">
+                  <button
+                    onPress={onClose}
+                    className="relative inline-block font-medium group py-1.5 px-2.5 "
+                  >
+                    <span className="absolute inset-0 w-full h-full transition duration-500 ease-out transform translate-x-1 translate-y-1 bg-indigo-500 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+                    <span className="absolute inset-0 w-full h-full bg-white border border-indigo-600 group-hover:bg-indigo-50"></span>
+                    <span className="relative text-indigo-600 ">Close</span>
+                  </button>
+                </div> */}
+
                 <Button color="danger" variant="light" onPress={onClose}>
                   Close
                 </Button>
