@@ -4,7 +4,12 @@ import profileImage from "../../assets/profile_image.JPG";
 import profileBackground from "../../assets/profile_background.jpg";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import {
+  faGithub,
+  faInstagram,
+  faLinkedin,
+  faMedium,
+} from "@fortawesome/free-brands-svg-icons";
 import { bangers, oxygen, raleway, space } from "../utils/fonts";
 
 export default function Profile() {
@@ -33,12 +38,46 @@ export default function Profile() {
             <p className={`${raleway.className} text-pink-500 font-semibold`}>
               Junior Web Dev
             </p>
+
+            <div className="flex justify-center gap-3 my-2">
+              <Link 
+              href="https://medium.com/@shaky411"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              >
+                <FontAwesomeIcon
+                  className="text-gray-300 hover:text-gray-400 duration-400"
+                  size="lg"
+                  icon={faMedium}
+                />
+              </Link>
+              <Link 
+              href="https://www.instagram.com/marc_bristol_uk/?next=%2F"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              >
+                <FontAwesomeIcon
+                  className="text-gray-300 hover:text-gray-400 duration-400"
+                  size="lg"
+                  icon={faInstagram}
+                />
+              </Link>
+              <Link 
+              href="https://www.linkedin.com/in/marcnorris1984/"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              >
+                <FontAwesomeIcon
+                  className="text-gray-300 hover:text-gray-400 duration-400"
+                  size="lg"
+                  icon={faLinkedin}
+                />
+              </Link>
+            </div>
           </div>
 
-          <div className="flex flex-col px-10 pt-4 pb-8 gap-4">
-            <p
-              className={`${raleway.className} sm:px-10 text-center text-lg`}
-            >
+          <div className="flex flex-col px-10 pb-8 gap-4">
+            <p className={`${raleway.className} sm:px-10 text-center text-lg`}>
               Junior web developer passionate about front-end design and
               development. Proud father of two beautiful daughters and husband
               to a wonderful wife. When I’m not coding, you’ll find me catching
