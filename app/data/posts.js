@@ -22,7 +22,7 @@ const posts = [
     image: "/assets/next_blog_1.jpg",
     image_details: "n/a",
     author: "Marc Norris",
-    reading_time: "7 min read",
+    reading_time: "3 min read",
   },
   {
     id: "3",
