@@ -12,7 +12,7 @@ export default function Open() {
         <Image src={githubImage} width={200} height={200} alt="github logo" />
 
         <div className="sm:w-1/2 flex flex-col gap-4">
-          <p className={`${space.className}`}>
+          <p className={`${space.className} text-center`}>
             I believe in transparency when working with sensitive information
             which is why I have decided to make this password generator{" "}
             <strong>open source</strong>.

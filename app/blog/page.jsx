@@ -30,7 +30,8 @@ export default async function Blog() {
 
   // Separate the first post and the remaining posts
   const firstPost = posts[0];
-  const remainingPosts = posts.slice(1);
+  const secondPost = posts[1];
+  const remainingPosts = posts.slice(2);
 
   return (
     <main className="flex flex-col items-center justify-center max-w-5xl mx-auto p-10 sm:p-10">
@@ -64,16 +65,64 @@ export default async function Blog() {
             <span className="text-tiny text-gray-400 mt-2">
               {firstPost.date}
             </span>
-            <p className={`${raleway.className} mt-4 mb-4 text-md`}>
+            <p className={`${raleway.className} mt-4 text-md`}>
               {typeof firstPost.content === "string"
                 ? firstPost.content.slice(0, 100)
                 : "Content not available"}
               ...
             </p>
 
+            <span className="my-2 text-gray-400 text-sm">{firstPost.reading_time}</span>
+
             <div className="mx-auto">
               <Link
                 href={`/blog/${firstPost.id}`}
+                className={`${oxygen.className} relative inline-block group py-2 px-3`}
+              >
+                <span className="absolute inset-0 w-full h-full transition duration-500 ease-out transform translate-x-1 translate-y-1 bg-pink-500 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+                <span className="absolute inset-0 w-full h-full bg-white border border-pink-500 group-hover:bg-pink-50"></span>
+                <span className="relative text-pink-500 ">
+                  Continue reading
+                </span>
+              </Link>
+            </div>
+
+            {/* <Link
+              className={`${oxygen.className} rounded border-2 py-2 px-4 border-pink-400 hover:bg-slate-100 duration-400`}
+              href={`/blog/${firstPost.id}`}
+            >
+              Continue Reading
+            </Link> */}
+          </section>
+
+          {/* First Post Section */}
+          <section className="flex flex-col items-center justify-center mb-10 p-6 border-b border-gray-300">
+            <Image
+              priority
+              className="w-full mb-4"
+              src={secondPost.image}
+              width={800}
+              height={400}
+              alt={secondPost.title}
+            />
+            <h2 className={`${raleway.className} text-gray-600 text-3xl`}>
+              {secondPost.title}
+            </h2>
+            <span className="text-tiny text-gray-400 mt-2">
+              {secondPost.date}
+            </span>
+            <p className={`${raleway.className} mt-4 text-md`}>
+              {typeof secondPost.content === "string"
+                ? secondPost.content.slice(0, 100)
+                : "Content not available"}
+              ...
+            </p>
+
+            <span className="my-2 text-gray-400 text-sm">{secondPost.reading_time}</span>
+
+            <div className="mx-auto">
+              <Link
+                href={`/blog/${secondPost.id}`}
                 className={`${oxygen.className} relative inline-block group py-2 px-3`}
               >
                 <span className="absolute inset-0 w-full h-full transition duration-500 ease-out transform translate-x-1 translate-y-1 bg-pink-500 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
