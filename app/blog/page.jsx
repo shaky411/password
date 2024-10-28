@@ -147,7 +147,7 @@ export default async function Blog() {
                 <li className="flex flex-col items-center justify-center gap-4">
                   <Image
                     priority
-                    className="w-full opacity-25"
+                    className="w-full"
                     src={post.image}
                     width={500}
                     height={150}
@@ -164,13 +164,13 @@ export default async function Blog() {
                   </p>
                   <div className="mx-auto">
                     <Link
-                      href={`/blog/${firstPost.id}`}
-                      className={`${oxygen.className} relative inline-block group py-2 px-3 pointer-events-none`}
+                      href={`/blog/${post.id}`}
+                      className={`${oxygen.className} relative inline-block group py-2 px-3`}
                     >
                       <span className="absolute inset-0 w-full h-full transition duration-500 ease-out transform translate-x-1 translate-y-1 bg-pink-500 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
                       <span className="absolute inset-0 w-full h-full bg-white border border-pink-500 group-hover:bg-pink-50"></span>
                       <span className="relative text-pink-500 ">
-                        Coming soon!
+                        Continue reading
                       </span>
                     </Link>
                   </div>
