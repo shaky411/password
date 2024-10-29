@@ -1,5 +1,5 @@
 import posts from "../../data/posts";
-import { bangers, oxygen, raleway } from "@/app/utils/fonts";
+import { raleway } from "@/app/utils/fonts";
 import Image from "next/image";
 import CopyLinkButton from "@/app/Components/copyLink";
 // import Head from "next/head";
@@ -7,19 +7,9 @@ import Link from "next/link";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faInfoCircle,
-  faLink,
-  faShare,
-  faThumbsUp,
-} from "@fortawesome/free-solid-svg-icons";
-import {
   faFacebook,
-  faLinkedin,
-  faMedium,
-  faTwitter,
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-
 
 async function getPost(postId) {
   const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/posts`);
@@ -57,16 +47,6 @@ export async function generateMetadata({ params }) {
   };
 }
 
-const handleCopyLink = () => {
-  navigator.clipboard.writeText(currentUrl)
-    .then(() => {
-      alert("Link copied to clipboard!");
-    })
-    .catch((err) => {
-      console.error("Failed to copy link: ", err);
-    });
-};
-
 export default async function PostPage({ params }) {
   const post = await getPost(params.postId);
   console.log("this is the post", post);
@@ -76,11 +56,10 @@ export default async function PostPage({ params }) {
   }
 
   // Construct the current URL dynamically using environment variable
-  const currentUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/blog/${post.id}`
+  const currentUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/blog/${post.id}`;
 
   return (
     <main className="flex flex-col gap-4 justify-start max-w-6xl mx-auto p-10 sm:p-10 min-h-screen">
-
       {/* <Head>
         <title>{post.title}</title>
         <meta property="og:title" content={post.title} />
@@ -124,25 +103,25 @@ export default async function PostPage({ params }) {
         ))}
       </div>
 
+      <span className={`${raleway.className} italic text-gray-400 text-sm`}>Thanks for taking the time to read my post.</span>
+
+      {/* Sharing links */}
       <div className="flex flex-col mt-4">
-
-
         <span className={`${raleway.className} text-blue-500`}>Share it</span>
-        
-        <div className="flex gap-2 my-4">
-        <Link
-          href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-            currentUrl
-          )}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-gray-500 hover:text-blue-500 duration-300"
-        >
-          <FontAwesomeIcon icon={faFacebook} size="xl" />
-        </Link>
 
-        
-        {/* <Link
+        <div className="flex gap-2 my-4">
+          <Link
+            href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+              currentUrl
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-500 hover:text-blue-500 duration-300"
+          >
+            <FontAwesomeIcon icon={faFacebook} size="xl" />
+          </Link>
+
+          {/* <Link
           href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(
             currentUrl
           )}&title=${encodeURIComponent(
@@ -157,47 +136,20 @@ export default async function PostPage({ params }) {
           <FontAwesomeIcon icon={faLinkedin} size="xl" />
         </Link> */}
 
-        <Link
-          href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(
-            currentUrl
-          )}&text=${encodeURIComponent(post.title)}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-gray-500 hover:text-black duration-300"
-        >
-          <FontAwesomeIcon icon={faXTwitter} size="xl" />
-        </Link>
+          <Link
+            href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(
+              currentUrl
+            )}&text=${encodeURIComponent(post.title)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-500 hover:text-black duration-300"
+          >
+            <FontAwesomeIcon icon={faXTwitter} size="xl" />
+          </Link>
 
-<CopyLinkButton url={currentUrl} />
-        
+          <CopyLinkButton url={currentUrl} />
         </div>
-        
       </div>
-
-      {/* <Link
-        className="text-gray-500 hover:text-gray-900 duration-300 w-fit"
-        target="_blank"
-        rel="noopener noreferrer nofollow"
-        href="https://medium.com/@shaky411"
-      >
-        <FontAwesomeIcon size="xl" icon={faMedium} />
-      </Link> */}
-      {/* <div className="flex gap-4">
-      <div className="border w-fit px-2 py-1 rounded shadow">
-        <button className="mr-2 text-gray-500">
-          <FontAwesomeIcon icon={faThumbsUp} />
-        </button>
-
-        <span className="text-blue-500">3</span>
-      </div>
-
-      <div className="border w-fit px-2 py-1 rounded shadow">
-        <button className=" text-gray-500">
-          <FontAwesomeIcon icon={faShare} />
-        </button>
-      </div>
-
-      </div> */}
 
       <div className="mt-4 mr-auto">
         <Link
