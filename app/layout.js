@@ -6,6 +6,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import Footer from "./Components/footer";
 import Navbar from "./Components/navbar";
 import Script from "next/script";
+import FirstVisitPopup from "./Components/firstVisitPopup";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -71,6 +72,7 @@ export default function RootLayout({ children }) {
         <SpeedInsights />
         <Analytics />
         <Footer />
+        <FirstVisitPopup />
       </body>
     </html>
   );
