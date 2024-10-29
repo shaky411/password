@@ -162,6 +162,9 @@ export default async function Blog() {
                       : "Content not available"}
                     ...
                   </p>
+
+                  {/* <span className="my-2 text-gray-400 text-sm">{post.reading_time}</span> */}
+
                   <div className="mx-auto">
                     <Link
                       href={`/blog/${post.id}`}

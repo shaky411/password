@@ -1,12 +1,14 @@
 import posts from "../../data/posts";
 import { bangers, oxygen, raleway } from "@/app/utils/fonts";
 import Image from "next/image";
+import CopyLinkButton from "@/app/Components/copyLink";
 // import Head from "next/head";
 import Link from "next/link";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faInfoCircle,
+  faLink,
   faShare,
   faThumbsUp,
 } from "@fortawesome/free-solid-svg-icons";
@@ -15,6 +17,7 @@ import {
   faLinkedin,
   faMedium,
   faTwitter,
+  faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 
 
@@ -53,6 +56,16 @@ export async function generateMetadata({ params }) {
     },
   };
 }
+
+const handleCopyLink = () => {
+  navigator.clipboard.writeText(currentUrl)
+    .then(() => {
+      alert("Link copied to clipboard!");
+    })
+    .catch((err) => {
+      console.error("Failed to copy link: ", err);
+    });
+};
 
 export default async function PostPage({ params }) {
   const post = await getPost(params.postId);
@@ -111,25 +124,25 @@ export default async function PostPage({ params }) {
         ))}
       </div>
 
-      {/* <div className="flex flex-col mt-4">
+      <div className="flex flex-col mt-4">
 
 
-        <span className={`${raleway.className} text-gray-500`}>Share it</span>
+        <span className={`${raleway.className} text-blue-500`}>Share it</span>
         
-        <div className="flex gap-4 my-4">
+        <div className="flex gap-2 my-4">
         <Link
           href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
             currentUrl
           )}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-500 hover:text-gray-900 duration-300"
+          className="text-gray-500 hover:text-blue-500 duration-300"
         >
           <FontAwesomeIcon icon={faFacebook} size="xl" />
         </Link>
 
         
-        <Link
+        {/* <Link
           href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(
             currentUrl
           )}&title=${encodeURIComponent(
@@ -142,7 +155,7 @@ export default async function PostPage({ params }) {
           className="text-gray-500 hover:text-gray-900 duration-300"
         >
           <FontAwesomeIcon icon={faLinkedin} size="xl" />
-        </Link>
+        </Link> */}
 
         <Link
           href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(
@@ -150,22 +163,25 @@ export default async function PostPage({ params }) {
           )}&text=${encodeURIComponent(post.title)}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-500 hover:text-gray-900 duration-300"
+          className="text-gray-500 hover:text-black duration-300"
         >
-          <FontAwesomeIcon icon={faTwitter} size="xl" />
+          <FontAwesomeIcon icon={faXTwitter} size="xl" />
         </Link>
+
+<CopyLinkButton url={currentUrl} />
+        
         </div>
         
-      </div> */}
+      </div>
 
-      <Link
+      {/* <Link
         className="text-gray-500 hover:text-gray-900 duration-300 w-fit"
         target="_blank"
         rel="noopener noreferrer nofollow"
         href="https://medium.com/@shaky411"
       >
         <FontAwesomeIcon size="xl" icon={faMedium} />
-      </Link>
+      </Link> */}
       {/* <div className="flex gap-4">
       <div className="border w-fit px-2 py-1 rounded shadow">
         <button className="mr-2 text-gray-500">

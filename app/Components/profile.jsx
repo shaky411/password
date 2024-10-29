@@ -9,8 +9,11 @@ import {
   faInstagram,
   faLinkedin,
   faMedium,
+  faPinterest,
+  faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { bangers, oxygen, raleway, space } from "../utils/fonts";
+import { faX } from "@fortawesome/free-solid-svg-icons";
 
 export default function Profile() {
   return (
@@ -39,11 +42,11 @@ export default function Profile() {
               Junior Web Dev
             </p>
 
-            <div className="flex justify-center gap-3 my-2">
-              <Link 
-              href="https://medium.com/@shaky411"
-              target="_blank"
-              rel="noopener noreferrer nofollow"
+            <div className="flex justify-center gap-3 my-4">
+              <Link
+                href="https://medium.com/@shaky411"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
               >
                 <FontAwesomeIcon
                   className="text-gray-300 hover:text-gray-400 duration-400"
@@ -51,10 +54,10 @@ export default function Profile() {
                   icon={faMedium}
                 />
               </Link>
-              <Link 
-              href="https://www.instagram.com/marc_bristol_uk/?next=%2F"
-              target="_blank"
-              rel="noopener noreferrer nofollow"
+              <Link
+                href="https://www.instagram.com/marc_bristol_uk/?next=%2F"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
               >
                 <FontAwesomeIcon
                   className="text-gray-300 hover:text-gray-400 duration-400"
@@ -62,16 +65,40 @@ export default function Profile() {
                   icon={faInstagram}
                 />
               </Link>
-              <Link 
-              href="https://www.linkedin.com/in/marcnorris1984/"
-              target="_blank"
-              rel="noopener noreferrer nofollow"
+              <Link
+                href="https://www.linkedin.com/in/marcnorris1984/"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
               >
                 <FontAwesomeIcon
                   className="text-gray-300 hover:text-gray-400 duration-400"
                   size="lg"
                   icon={faLinkedin}
                 />
+              </Link>
+              <Link
+                href="https://uk.pinterest.com/marcn2230/"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+              >
+                <FontAwesomeIcon
+                  className="text-gray-300 hover:text-gray-400 duration-400"
+                  size="lg"
+                  icon={faPinterest}
+                />
+                
+              </Link>
+              <Link
+                href="https://x.com/graygekko"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+              >
+                <FontAwesomeIcon
+                  className="text-gray-300 hover:text-gray-400 duration-400"
+                  size="lg"
+                  icon={faXTwitter}
+                />
+                
               </Link>
             </div>
           </div>
@@ -100,7 +127,8 @@ export default function Profile() {
           <div className="p-10 bg-gray-200 text-slate-900 rounded-b-lg mt-2 flex flex-col gap-4 items-center justify-center">
             {/* <h2 className={`${bangers.className} text-3xl text-gray-600`}>Get in Touch</h2> */}
             <span className={`${space.className} text-center`}>
-              For all enquiries, please reach out through the link below.
+              For all enquiries, please reach out through one of my social links
+              or the link below.
             </span>
             <Link
               target="_blank"
