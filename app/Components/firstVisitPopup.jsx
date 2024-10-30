@@ -1,6 +1,7 @@
 "use client";
 
 import { bangers, raleway } from "../utils/fonts";
+import Link from "next/link";
 
 export default function FirstVisitPopup({
   showPopup,
@@ -37,7 +38,16 @@ export default function FirstVisitPopup({
             <span className="absolute inset-0 w-full h-full bg-white border border-rose-600 group-hover:bg-rose-50"></span>
             <span className="relative text-rose-600">Decline</span>
           </button>
+
+          
         </div>
+        <div className="my-10 mr-auto">
+      <Link href="/cookies" className="relative inline-block font-medium text-center group py-1.5 px-2.5 w-[100px]">
+          <span className="absolute inset-0 w-full h-full transition duration-500 ease-out transform translate-x-1 translate-y-1 bg-indigo-500 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+          <span className="absolute inset-0 w-full h-full bg-white border border-indigo-600 group-hover:bg-indigo-50"></span>
+          <span className="relative text-indigo-600 ">Policy</span>
+        </Link>
+      </div>
       </div>
     </div>
   );
