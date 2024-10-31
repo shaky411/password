@@ -3,7 +3,7 @@ import { bangers, oxygen, raleway } from "../utils/fonts";
 import Link from "next/link";
 import Image from "next/image";
 import NewsletterForm from "../Components/newsForm";
-import ogImage from "../../public/blog_ogImage.jpg"
+import ogImage from "../blog_ogImage.jpg"
 
 export const metadata = {
   title: {

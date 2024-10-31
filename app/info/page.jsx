@@ -1,13 +1,23 @@
-"use client";
-
+import MetadataComponent from "../utils/metadata";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { bangers, oxygen, raleway } from "../utils/fonts";
+import ogImage from "../opengraph-image.png"
 
 import Link from "next/link";
-import { useState } from "react";
+
+export const metadata = MetadataComponent({
+  title: "Info",
+  description: "Useful information for creating secure passwords",
+  keywords: "info, passwords, information",
+  canonicalUrl: "https://www.passwordmanager.org.uk/info",
+  openGraphTitle: "Creating Secuure Passwords",
+  openGraphDescription: "Useful information for creating secure passwords",
+  openGraphImage: ogImage
+})
+
 
 export default function Info() {
-  const [selectedId, setSelectedId] = useState(null);
+    
 
   return (
     <main className="flex flex-col items-center justify-center max-w-6xl mx-auto p-10 sm:p-10">
