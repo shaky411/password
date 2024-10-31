@@ -10,11 +10,9 @@ export default function Hero() {
   return (
     <div className="flex flex-col sm:flex-row gap-4 items-center justify-center mb-4">
       <Image
-        className=""
         priority
         src={mainImage}
         width={325}
-        height={300}
         alt="image"
       />
       <div className="flex flex-col items-center text-center">

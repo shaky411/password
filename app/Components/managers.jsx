@@ -1,7 +1,7 @@
 import Image from "next/image";
 import passwordImage from "../../public/1password.jpg";
 import dashlane from "../../public/dashlane.jpg";
-import nordpass from "../../assets/nordpass.png"
+import nordpass from "../../assets/nordpass.png";
 import Link from "next/link";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -23,11 +23,11 @@ export default function Managers() {
           rel="noopener noreferrer nofollow"
         >
           <Image
-            className=""
             src={passwordImage}
             width={200}
             height={200}
             alt="1 Password company logo"
+            placeholder="blur"
           />
         </Link>
 
@@ -37,7 +37,13 @@ export default function Managers() {
           target="_blank"
           rel="noopener noreferrer nofollow"
         >
-          <Image src={dashlane} width={200} height={200} alt="dashlane company logo" />
+          <Image
+            src={dashlane}
+            width={200}
+            height={200}
+            alt="dashlane company logo"
+            placeholder="blur"
+          />
         </Link>
 
         <Link
@@ -46,15 +52,23 @@ export default function Managers() {
           target="_blank"
           rel="noopener noreferrer nofollow"
         >
-          <Image src={nordpass} width={200} height={200} alt="nordpass company logo" />
+          <Image
+            src={nordpass}
+            width={200}
+            height={200}
+            alt="nordpass company logo"
+            placeholder="blur"
+          />
         </Link>
-        
       </div>
 
       <div className="flex items-center justify-center text-sm text-rose-400">
-        
-        <p><FontAwesomeIcon className="mr-1" icon={faTriangleExclamation} /> For ultimate security, I suggest using the password generators provided with your password manager.</p>
-        </div>
+        <p>
+          <FontAwesomeIcon className="mr-1" icon={faTriangleExclamation} /> For
+          ultimate security, I suggest using the password generators provided
+          with your password manager.
+        </p>
+      </div>
     </main>
   );
 }

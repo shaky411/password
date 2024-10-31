@@ -24,11 +24,13 @@ export async function generateMetadata({ params }) {
 
   return {
     title: post.title,
+    keywords: `blog, blog post, reading, ${post.title}, writing, blogs`,
     openGraph: {
       title: post.title,
       description: post.subtitle,
-      url: currentUrl,
       type: "article",
+      url: currentUrl,
+      authors: post.author,
       images: [
         {
           url: post.image,

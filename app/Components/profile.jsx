@@ -34,7 +34,7 @@ export default function Profile() {
 
           <div className="text-center mt-2">
             <h2
-              className={`${bangers.className} text-3xl sm:text-4xl text-gray-200`}
+               className={`${bangers.className} text-3xl sm:text-4xl text-gray-200`}
             >
               Marc Norris
             </h2>
@@ -42,68 +42,71 @@ export default function Profile() {
               Junior Web Dev
             </p>
 
-            <div className="flex justify-center gap-3 my-4">
-              <Link
-                href="https://medium.com/@shaky411"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-              >
-                <FontAwesomeIcon
-                  className="text-gray-300 hover:text-gray-400 duration-400"
-                  size="lg"
-                  icon={faMedium}
-                />
-              </Link>
-              <Link
-                href="https://www.instagram.com/marc_bristol_uk/?next=%2F"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-              >
-                <FontAwesomeIcon
-                  className="text-gray-300 hover:text-gray-400 duration-400"
-                  size="lg"
-                  icon={faInstagram}
-                />
-              </Link>
-              <Link
-                href="https://www.linkedin.com/in/marcnorris1984/"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-              >
-                <FontAwesomeIcon
-                  className="text-gray-300 hover:text-gray-400 duration-400"
-                  size="lg"
-                  icon={faLinkedin}
-                />
-              </Link>
-              <Link
-                href="https://uk.pinterest.com/marcn2230/"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-              >
-                <FontAwesomeIcon
-                  className="text-gray-300 hover:text-gray-400 duration-400"
-                  size="lg"
-                  icon={faPinterest}
-                />
-                
-              </Link>
-              <Link
-                href="https://x.com/graygekko"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-              >
-                <FontAwesomeIcon
-                  className="text-gray-300 hover:text-gray-400 duration-400"
-                  size="lg"
-                  icon={faXTwitter}
-                />
-                
-              </Link>
+            <div className="flex justify-center mb-4 border-b border-gray-400 mx-10">
+              <div id="contact" className="flex justify-center gap-3 my-4">
+                <Link
+                  href="https://medium.com/@shaky411"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                >
+                  <FontAwesomeIcon
+                    className="text-gray-300 hover:text-gray-400 duration-400"
+                    size="lg"
+                    icon={faMedium}
+                  />
+                </Link>
+                <Link
+                  href="https://www.instagram.com/marc_bristol_uk/?next=%2F"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                >
+                  <FontAwesomeIcon
+                    className="text-gray-300 hover:text-gray-400 duration-400"
+                    size="lg"
+                    icon={faInstagram}
+                  />
+                </Link>
+                <Link
+                  href="https://www.linkedin.com/in/marcnorris1984/"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                >
+                  <FontAwesomeIcon
+                    className="text-gray-300 hover:text-gray-400 duration-400"
+                    size="lg"
+                    icon={faLinkedin}
+                  />
+                </Link>
+                <Link
+                  href="https://uk.pinterest.com/marcn2230/"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                >
+                  <FontAwesomeIcon
+                    className="text-gray-300 hover:text-gray-400 duration-400"
+                    size="lg"
+                    icon={faPinterest}
+                  />
+                </Link>
+                <Link
+                  href="https://x.com/graygekko"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                >
+                  <FontAwesomeIcon
+                    className="text-gray-300 hover:text-gray-400 duration-400"
+                    size="lg"
+                    icon={faXTwitter}
+                  />
+                </Link>
+              </div>
             </div>
           </div>
 
-          <div className="flex flex-col px-10 pb-8 gap-4">
+          <div className="flex flex-col px-10 pb-8 gap-4 items-center">
+            <span className={`${raleway.className} text-lg font-semibold`}>
+              About me
+            </span>
             <p className={`${raleway.className} sm:px-10 text-center text-lg`}>
               Junior web developer passionate about front-end design and
               development. Proud father of two beautiful daughters and husband
@@ -134,7 +137,6 @@ export default function Profile() {
               target="_blank"
               rel="noopener noreferrer nofollow"
               href="https://github.com/shaky411"
-              id="contact"
               className={`${space.className} focus:outline-none w-full text-center text-3xl rounded-full bg-white shadow-inner border text-pink-500 hover:text-pink-800 duration-400 px-6 py-4`}
             >
               <FontAwesomeIcon icon={faGithub} className="mr-2" />

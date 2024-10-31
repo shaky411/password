@@ -14,6 +14,7 @@ export default function Hardware() {
       <div className="flex flex-col justify-center items-center gap-10 border p-6 rounded-lg shadow bg-gradient-to-r from-slate-400 via-slate-300 to-slate-100">
         <div className="flex flex-col sm:flex-row justify-center items-center gap-5">
           <Image
+          className="hidden md:flex"
             src={securitykey}
             width={250}
             height={150}
