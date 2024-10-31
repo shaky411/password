@@ -44,7 +44,7 @@ export default function Footer() {
 
         <div className="text-slate-400 hover:text-gray-700 duration-300 text-sm mt-4 sm:mt-0 sm:ml-2 border p-2">
           <span className="mr-2">Update Cookies</span>
-          <button onClick={triggerPopup}>
+          <button className="" onClick={triggerPopup}>
             <FontAwesomeIcon size="lg" icon={faCookie} />
           </button>
         </div>

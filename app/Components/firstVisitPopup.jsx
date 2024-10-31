@@ -11,7 +11,7 @@ export default function FirstVisitPopup({
   if (!showPopup) return null;
 
   return (
-    <div className="fixed bottom-4 left-4 z-50 bg-slate-200 opacity-80 p-10 rounded-lg border shadow-xl w-full sm:w-1/3 lg:w-1/4">
+    <div className="fixed bottom-4 left-4 z-50 bg-slate-200 opacity-80 p-10 rounded-lg border shadow-xl w-full md:w-1/2 lg:w-1/3 xl:w-1/4">
         <h2 className={`${bangers.className} text-2xl text-slate-600 mb-4`}>Cookies Consent</h2>
       <p className={`${raleway.className} text-gray-800 font-semibold`}>
         This website uses cookies to help you have a superior and more admissible browsing experience on the website.

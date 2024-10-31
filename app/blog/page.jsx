@@ -3,6 +3,47 @@ import { bangers, oxygen, raleway } from "../utils/fonts";
 import Link from "next/link";
 import Image from "next/image";
 import NewsletterForm from "../Components/newsForm";
+import ogImage from "../../public/post_1.jpg"
+
+export const metadata = {
+  title: {
+    default: "Marc's Blog",
+  },
+  alternates: {
+    canonical: "https://www.passwordmanager.org.uk/blog",
+  },
+  keywords:
+    "blog, blogs, marc's blog, my blog, surfing, tech, trails, family",
+  openGraph: {
+    title: "Free to use Password Generator",
+    description: "Follow along as I share insights on what I'm learning, the waves I'm catching, and the paths I'm navigating.",
+    images: [
+      {
+        url: ogImage.src,
+        width: ogImage.width,
+        height: ogImage.height,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
+  description: "Follow along as I share insights on what I'm learning, the waves I'm catching, and the paths I'm navigating.",
+  metadataBase: new URL("https://www.passwordmanager.org.uk/blog"),
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+};
 
 async function fetchPosts() {
   const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/posts`, {
