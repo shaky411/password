@@ -13,16 +13,16 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: {
-    default: "Password Generator",
+    default: "Random Password Generator",
   },
   alternates: {
     canonical: "https://www.passwordmanager.org.uk",
   },
   keywords:
-    "password generator, passwords, password, create password, secure, security, free, free tool, secure password, open source, web safety, internet, internet safety, password suggestion generator, password suggestion, password github, github password, random password, random",
+    "password generator, passwords, password, create password, secure, security, open source, github, free, free tool, secure password, open source, web safety, internet, internet safety, password suggestion generator, password suggestion, password github, github password, random password, random",
   openGraph: {
     title: "Free to use Password Generator",
-    description: "Simple password generator created with NextJS",
+    description: "Simple random password generator created with NextJS",
     images: [
       {
         url: ogImage.src,
