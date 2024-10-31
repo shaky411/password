@@ -60,14 +60,6 @@ export default async function PostPage({ params }) {
 
   return (
     <main className="flex flex-col gap-4 justify-start max-w-6xl mx-auto p-10 sm:p-10 min-h-screen">
-      {/* <Head>
-        <title>{post.title}</title>
-        <meta property="og:title" content={post.title} />
-        <meta property="og:description" content={post.subtitle} />
-        <meta property="og:image" content={post.image} />
-        <meta property="og:url" content={currentUrl} />
-        <meta property="og:type" content="article" />
-      </Head> */}
 
       <Image
         priority
@@ -120,21 +112,6 @@ export default async function PostPage({ params }) {
           >
             <FontAwesomeIcon icon={faFacebook} size="xl" />
           </Link>
-
-          {/* <Link
-          href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(
-            currentUrl
-          )}&title=${encodeURIComponent(
-            post.title
-          )}&summary=${encodeURIComponent(
-            post.subtitle
-          )}&source=${encodeURIComponent(currentUrl)}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-gray-500 hover:text-gray-900 duration-300"
-        >
-          <FontAwesomeIcon icon={faLinkedin} size="xl" />
-        </Link> */}
 
           <Link
             href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(

@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.passwordmanager.org.uk
+
+# Sitemaps
+Sitemap: https://www.passwordmanager.org.uk/sitemap.xml
