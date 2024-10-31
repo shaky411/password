@@ -15,7 +15,7 @@ export const metadata = {
   keywords:
     "blog, blogs, marc's blog, my blog, surfing, tech, trails, family",
   openGraph: {
-    title: "Free to use Password Generator",
+    title: "Marc's Blog",
     description: "Follow along as I share insights on what I'm learning, the waves I'm catching, and the paths I'm navigating.",
     images: [
       {
