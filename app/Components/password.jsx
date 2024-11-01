@@ -67,21 +67,27 @@ export default function Password() {
   };
 
   const handleLengthChange = (e) => {
-    let length = parseInt(e.target.value);
-    if (!isNaN(length)) {
-      setPasswordOptions((prevOptions) => ({
-        ...prevOptions,
-        length: length,
-      }));
+    const input = e.target.value;
+    const length = parseInt(input);
+
+    // Set length to null if input is empty; otherwise, parse the number
+    if (input === "") {
+      setPasswordOptions((prevOptions) => ({ ...prevOptions, length: null }));
+    } else if (!isNaN(length) && length > 0) {
+      setPasswordOptions((prevOptions) => ({ ...prevOptions, length }));
     }
   };
 
   const handleGeneratePassword = () => {
-    const password = generatePassword(passwordOptions);
-    setGeneratedPassword(password);
-    setCrackingTime(calculateCrackingTime(password, passwordOptions));
+    if (passwordOptions.length) {
+      const password = generatePassword(passwordOptions);
+      setGeneratedPassword(password);
+      setCrackingTime(calculateCrackingTime(password, passwordOptions));
+    } else {
+      alert("Please enter a valid password length.");
+    }
   };
-
+  
   const getRandom = (arr) => {
     const randomValues = new Uint32Array(1);
     window.crypto.getRandomValues(randomValues);
@@ -155,22 +161,6 @@ export default function Password() {
       // alert("Password copied to clipboard!");
       onOpen();
     }
-  };
-
-  const evaluatePasswordStrength = (password, options) => {
-    let strength = 0;
-
-    if (options.length >= 12) strength += 1;
-    if (options.length >= 16) strength += 1;
-
-    if (options.lowerCase) strength += 1;
-    if (options.upperCase) strength += 1;
-    if (options.numeric) strength += 1;
-    if (options.special) strength += 1;
-
-    if (strength <= 2) return "Weak";
-    if (strength <= 4) return "Good";
-    return "Strong";
   };
 
   const getBackgroundColor = (strength) => {
