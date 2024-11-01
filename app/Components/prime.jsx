@@ -16,6 +16,7 @@ export default function Prime() {
           <p>We're giving you 30 days of Prime for FREE!</p>
           <span className="text-sm">Only £8.99/month after free trial.</span>
           <Link
+          className="w-[180px]"
             target="_blank"
             rel="noopener noreferrer nofollow"
             href="https://amzn.to/3C5XP9T"
@@ -33,3 +34,6 @@ export default function Prime() {
     </main>
   );
 }
+
+
+// Prime video link: https://amzn.to/40s7IZy

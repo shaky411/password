@@ -8,6 +8,7 @@ import Open from "./Components/open";
 import Strip from "./Components/strip";
 import Profile from "./Components/profile";
 import Prime from "./Components/prime";
+import PrimeVideo from "./Components/primeVideo";
 
 export default function Home() {
   return (
@@ -20,7 +21,8 @@ export default function Home() {
       <div className="mr-auto">
         <Managers />
       </div>
-      <Prime />
+      {/* <Prime /> */}
+      <PrimeVideo />
       {/* <Hardware /> */}
       <Open />
 

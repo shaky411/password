@@ -5,6 +5,7 @@ import ogImage from "../opengraph-image.png"
 
 import Link from "next/link";
 import Prime from "../Components/prime";
+import PrimeVideo from "../Components/primeVideo";
 
 export const metadata = MetadataComponent({
   title: "Info",
@@ -181,7 +182,12 @@ export default function Info() {
 
         <div className="col-span-2 sm:col-span-3">
           <Prime />
+          
         </div>
+
+        {/* <div className="col-span-2 sm:col-span-3">
+        <PrimeVideo />
+        </div> */}
       </div>
 
       
