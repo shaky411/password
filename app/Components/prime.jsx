@@ -8,7 +8,7 @@ export default function Prime() {
     <main>
       <div className="bg-[#222F3E] text-white grid gap-10 grid-cols-1 md:grid-cols-2 p-10 rounded-lg">
         <div className="flex flex-col gap-4">
-          <Image className="" src={primeWhite} width={80} />
+          <Image className="" src={primeWhite} width={80} alt="amazon prime logo" />
 
           <h2 className="text-2xl font-semibold">
             Enjoy the best of shopping and entertainment with Prime

@@ -9,6 +9,7 @@ import Strip from "./Components/strip";
 import Profile from "./Components/profile";
 import Prime from "./Components/prime";
 import PrimeVideo from "./Components/primeVideo";
+import Kindle from "./Components/kindle";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       </div>
       {/* <Prime /> */}
       <PrimeVideo />
+      {/* <Kindle /> */}
       {/* <Hardware /> */}
       <Open />
 

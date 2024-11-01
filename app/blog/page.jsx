@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import NewsletterForm from "../Components/newsForm";
 import ogImage from "../blog_ogImage.jpg"
+import Kindle from "../Components/kindle";
 
 export const metadata = {
   title: {
@@ -180,6 +181,7 @@ export default async function Blog() {
             >
               Continue Reading
             </Link> */}
+            
           </section>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -222,6 +224,8 @@ export default async function Blog() {
               </ul>
             ))}
           </div>
+
+          <Kindle />
         </div>
       </div>
 
