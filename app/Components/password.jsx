@@ -87,7 +87,7 @@ export default function Password() {
       alert("Please enter a valid password length.");
     }
   };
-  
+
   const getRandom = (arr) => {
     const randomValues = new Uint32Array(1);
     window.crypto.getRandomValues(randomValues);
@@ -243,7 +243,7 @@ export default function Password() {
         className="w-full sm:w-1/2 mr-auto"
         type="number"
         label="Password Length"
-        value={passwordOptions.length}
+        value={passwordOptions.length ?? ""} // Use an empty string if length is null
         onChange={handleLengthChange}
       />
       <div className="display:block sm:flex justify-start gap-4 mt-4">
@@ -317,14 +317,15 @@ export default function Password() {
       </div>
 
       <div className="mt-4 w-full text-center">
-        
-
         {/* Cracking time display - only shown after password generation */}
-      {generatedPassword && (
-        <div className="mt-4 text-center">
-          <p>It would take a computer approximately <strong>{crackingTime}</strong> to crack this password.</p>
-        </div>
-      )}
+        {generatedPassword && (
+          <div className="mt-4 text-center">
+            <p>
+              It would take a computer approximately{" "}
+              <strong>{crackingTime}</strong> to crack this password.
+            </p>
+          </div>
+        )}
       </div>
 
       <div className="mx-auto mt-4 w-full">
@@ -337,9 +338,7 @@ export default function Password() {
           <span className="relative text-white">Generate Password</span>
         </button>
       </div>
-      
 
-      
       <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
         <ModalContent>
           {(onClose) => (
