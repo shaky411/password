@@ -11,6 +11,7 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCopy,
+  faInfoCircle,
   faTriangleExclamation,
 } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -30,6 +31,7 @@ export default function Password() {
   const [checkboxValid, setCheckboxValid] = useState(false);
   const [showErrorMessage, setShowErrorMessage] = useState(false);
   const [passwordStrength, setPasswordStrength] = useState("");
+  const [crackingTime, setCrackingTime] = useState("");
   const [passwordOptions, setPasswordOptions] = useState({
     length: 20,
     lowerCase: true,
@@ -75,18 +77,9 @@ export default function Password() {
   };
 
   const handleGeneratePassword = () => {
-    const { lowerCase, upperCase, numeric, special } = passwordOptions;
-    const isAtLeastOneOptionSelected =
-      lowerCase || upperCase || numeric || special;
-
-    if (isAtLeastOneOptionSelected) {
-      const password = generatePassword(passwordOptions);
-      setGeneratedPassword(password);
-      setShowErrorMessage(false); // Hide error message if at least one option is selected
-      setPasswordStrength(evaluatePasswordStrength(password, passwordOptions));
-    } else {
-      setShowErrorMessage(true); // Show error message if no option is selected
-    }
+    const password = generatePassword(passwordOptions);
+    setGeneratedPassword(password);
+    setCrackingTime(calculateCrackingTime(password, passwordOptions));
   };
 
   const getRandom = (arr) => {
@@ -204,6 +197,53 @@ export default function Password() {
     return arr.join("");
   };
 
+  const calculateCrackingTime = (password, options) => {
+    let charsetSize = 0;
+    if (options.lowerCase) charsetSize += 26;
+    if (options.upperCase) charsetSize += 26;
+    if (options.numeric) charsetSize += 10;
+    if (options.special) charsetSize += specialCharacters.length;
+
+    const combinations = Math.pow(charsetSize, password.length);
+    let seconds = combinations / 1e9; // Assuming 1 billion guesses per second
+
+    // Apply a random factor for slight variation
+    const randomFactor = 0.9 + Math.random() * 0.2; // random number between 0.9 and 1.1
+    seconds *= randomFactor;
+
+    const timeUnits = [
+      { unit: "seconds", value: 60 },
+      { unit: "minutes", value: 60 },
+      { unit: "hours", value: 24 },
+      { unit: "days", value: 365 },
+      { unit: "years", value: 1 },
+    ];
+
+    let time = seconds;
+    let unitIndex = 0;
+
+    while (
+      unitIndex < timeUnits.length - 1 &&
+      time >= timeUnits[unitIndex].value
+    ) {
+      time /= timeUnits[unitIndex].value;
+      unitIndex++;
+    }
+
+    if (time >= 1e12)
+      return `${(time / 1e12).toFixed(2)} trillion ${
+        timeUnits[unitIndex].unit
+      }`;
+    if (time >= 1e9)
+      return `${(time / 1e9).toFixed(2)} billion ${timeUnits[unitIndex].unit}`;
+    if (time >= 1e6)
+      return `${(time / 1e6).toFixed(2)} million ${timeUnits[unitIndex].unit}`;
+    if (time >= 1e3)
+      return `${(time / 1e3).toFixed(2)} thousand ${timeUnits[unitIndex].unit}`;
+
+    return `${Math.round(time)} ${timeUnits[unitIndex].unit}`;
+  };
+
   return (
     <div
       className={`${oxygen.className} flex flex-col mt-4 items-start justify-center max-w-6xl w-full border shadow rounded-lg p-4 sm:p-10`}
@@ -260,10 +300,10 @@ export default function Password() {
         <textarea
           id="result"
           readOnly
+          key={generatedPassword} // Force re-render by using key prop
           className="border resize-none border-slate-300 shadow-lg rounded-lg p-4 text-center w-full"
           placeholder="Your secure password"
           value={generatedPassword}
-          onChange={() => {}}
         ></textarea>
 
         <button
@@ -287,17 +327,14 @@ export default function Password() {
       </div>
 
       <div className="mt-4 w-full text-center">
-        <span
-          className={`font-semibold ${
-            passwordStrength === "Weak"
-              ? "text-red-500"
-              : passwordStrength === "Good"
-              ? "text-yellow-500"
-              : "text-green-500"
-          }`}
-        >
-          {passwordStrength && `${passwordStrength} password`}
-        </span>
+        
+
+        {/* Cracking time display - only shown after password generation */}
+      {generatedPassword && (
+        <div className="mt-4 text-center">
+          <p>It would take a computer approximately <strong>{crackingTime}</strong> to crack this password.</p>
+        </div>
+      )}
       </div>
 
       <div className="mx-auto mt-4 w-full">
@@ -310,7 +347,9 @@ export default function Password() {
           <span className="relative text-white">Generate Password</span>
         </button>
       </div>
+      
 
+      
       <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
         <ModalContent>
           {(onClose) => (
