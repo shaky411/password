@@ -4,6 +4,7 @@ import { bangers, oxygen, raleway } from "../utils/fonts";
 import ogImage from "../opengraph-image.png"
 
 import Link from "next/link";
+import Prime from "../Components/prime";
 
 export const metadata = MetadataComponent({
   title: "Info",
@@ -176,6 +177,10 @@ export default function Info() {
           >
             more info
           </Link>
+        </div>
+
+        <div className="col-span-3">
+          <Prime />
         </div>
       </div>
 

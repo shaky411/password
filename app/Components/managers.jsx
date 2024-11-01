@@ -10,7 +10,7 @@ import { raleway } from "../utils/fonts";
 
 export default function Managers() {
   return (
-    <main className={`${raleway.className} flex flex-col gap-4 mt-10`}>
+    <main className={`${raleway.className} flex flex-col gap-4 my-10`}>
       <div>
         <h2>My Password Manager recommendations:</h2>
       </div>
