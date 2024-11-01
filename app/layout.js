@@ -57,7 +57,35 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <meta name="google-adsense-account" content="ca-pub-6386565516888254" />
-        <Script
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "http://schema.org",
+              "@type": "WebApplication",
+              "name": "Random Password Generator",
+              "url": "https://www.passwordmanager.org.uk",
+              "description": "Generate secure passwords with this free online tool.",
+              "applicationCategory": "Utility",
+              "operatingSystem": "Web",
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD",
+                "category": "Free",
+              },
+              "provider": {
+                "@type": "Organization",
+                "name": "Your Brand Name",
+                "url": "https://www.passwordmanager.org.uk",
+              },
+              "creator": {
+                "@type": "Person",
+                "name": "Marc Norris",
+                "url": "https://www.passwordmanager.org.uk/#contact"
+              }
+            }),
+          }}
           strategy="afterInteractive"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
           data-ad-client="ca-pub-6386565516888254"
@@ -77,3 +105,33 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
+{/* <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "http://schema.org",
+              "@type": "WebApplication",
+              "name": "Random Password Generator",
+              "url": "https://www.passwordmanager.org.uk",
+              "description": "Generate secure passwords with this free online tool.",
+              "applicationCategory": "Utility",
+              "operatingSystem": "Web",
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD",
+                "category": "Free",
+              },
+              "provider": {
+                "@type": "Organization",
+                "name": "Your Brand Name",
+                "url": "https://www.passwordmanager.org.uk",
+              },
+            }),
+          }}
+          strategy="afterInteractive"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+          data-ad-client="ca-pub-6386565516888254"
+          async
+        /> */}
