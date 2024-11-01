@@ -179,7 +179,7 @@ export default function Info() {
           </Link>
         </div>
 
-        <div className="col-span-3">
+        <div className="col-span-2 sm:col-span-3">
           <Prime />
         </div>
       </div>
