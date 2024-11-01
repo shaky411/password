@@ -28,7 +28,7 @@ export default function Profile() {
               className="object-top"
             />
           </div>
-          <div className="mx-auto w-40 h-40 relative -mt-16 border-4 border-gray-600 rounded-full overflow-hidden">
+          <div className="mx-auto w-40 h-40 relative -mt-20 border-4 border-gray-600 rounded-full overflow-hidden">
             <Image src={profileImage} alt="profile image" priority />
           </div>
 

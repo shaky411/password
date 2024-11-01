@@ -7,6 +7,7 @@ import Hero from "./Components/hero";
 import Open from "./Components/open";
 import Strip from "./Components/strip";
 import Profile from "./Components/profile";
+import Prime from "./Components/prime";
 
 export default function Home() {
   return (
@@ -19,8 +20,8 @@ export default function Home() {
       <div className="mr-auto">
         <Managers />
       </div>
-
-      <Hardware />
+      <Prime />
+      {/* <Hardware /> */}
       <Open />
 
       <Profile />

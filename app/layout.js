@@ -5,9 +5,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Footer from "./Components/footer";
 import Navbar from "./Components/navbar";
-import Script from "next/script";
 import FirstVisitPopup from "./Components/firstVisitPopup";
-import ClientAnalytics from "./Components/clientAnalytics";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -71,13 +69,13 @@ export default function RootLayout({ children }) {
               "offers": {
                 "@type": "Offer",
                 "price": "0",
-                "priceCurrency": "USD",
+                "priceCurrency": "GBP",
                 "category": "Free",
               },
               "provider": {
                 "@type": "Organization",
-                "name": "Your Brand Name",
-                "url": "https://www.passwordmanager.org.uk",
+                "name": "Graygecko",
+                "url": "https://www.graygecko.co.uk",
               },
               "creator": {
                 "@type": "Person",
