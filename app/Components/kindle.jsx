@@ -7,15 +7,21 @@ export default function Kindle() {
   return (
     <main>
       <div className="bg-[#222F3E] text-white grid gap-10 grid-cols-1 md:grid-cols-2 p-10 rounded-lg mt-10">
-        <div className="flex flex-col gap-4">
-          <Image className="mx-auto" src={kindleTitle} width={280} alt="amazon kindle" />
+        <div className="flex justify-between flex-col gap-4">
+          <div className="space-y-8">
+            <Image
+              className="mx-auto"
+              src={kindleTitle}
+              width={280}
+              alt="amazon kindle"
+            />
 
-          <h2 className="text-xl font-semibold">
-            Explore millions of books, thousands of audiobooks and selected
-            magazine subscriptions on any device.
-          </h2>
-          <p>We're giving you 30 days of Prime for FREE!</p>
-          <span className="text-sm">Only £8.99/month after free trial.</span>
+            <h2 className="text-xl font-semibold">
+              Explore millions of books, thousands of audiobooks and selected
+              magazine subscriptions on any device.
+            </h2>
+          </div>
+
           <Link
             className="w-full"
             target="_blank"
