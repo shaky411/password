@@ -13,16 +13,15 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: {
-    default: "Random Password Generator",
+    default: "Random Password Generator | Secure and Free Password Tool"
   },
   alternates: {
     canonical: "https://www.passwordmanager.org.uk",
   },
-  keywords:
-    "password generator, passwords, password, create password, secure, security, open source, github, free, free tool, secure password, open source, web safety, internet, internet safety, password suggestion generator, password suggestion, password github, github password, random password, random",
+  keywords: "password generator, secure password generator, free password generator, online security tool, data protection, internet safety, Next.js password generator",
   openGraph: {
-    title: "Free to use Password Generator",
-    description: "Simple random password generator created with NextJS",
+    title: "Create Secure Passwords with Our Free Password Generator",
+    description: "Try our free online password generator for secure and random passwords to protect your accounts. Simple and user-friendly.",
     images: [
       {
         url: ogImage.src,
@@ -34,7 +33,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
   },
-  description: "This is a simple, free to use password generator, enjoy",
+  description: "Generate secure, random passwords with ease. Free online password generator tool for improved web safety and data protection.",
   metadataBase: new URL("https://www.passwordmanager.org.uk"),
   robots: {
     index: true,
@@ -43,7 +42,9 @@ export const metadata = {
     googleBot: {
       index: true,
       follow: true,
+      noarchive: true,
       noimageindex: true,
+      nositelinkssearchbox: true,
       "max-video-preview": -1,
       "max-image-preview": "large",
       "max-snippet": -1,

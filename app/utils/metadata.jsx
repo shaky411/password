@@ -39,7 +39,9 @@ const MetadataComponent = ({
     googleBot: {
       index: true,
       follow: true,
+      noarchive: true,
       noimageindex: true,
+      nositelinkssearchbox: true,
       "max-video-preview": -1,
       "max-image-preview": "large",
       "max-snippet": -1,
