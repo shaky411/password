@@ -1,5 +1,5 @@
 import posts from "../../data/posts";
-import { raleway } from "@/app/utils/fonts";
+import { bangers, raleway } from "@/app/utils/fonts";
 import Image from "next/image";
 import CopyLinkButton from "@/app/Components/copyLink";
 // import Head from "next/head";
@@ -20,6 +20,14 @@ async function getPost(postId) {
 // Dynamically generate metadata
 export async function generateMetadata({ params }) {
   const post = await getPost(params.postId);
+
+  if(!post) {
+    return{
+      title: "Post not found",
+      description: "The blog post you're looking for does not exist.",
+    };
+  }
+
   const currentUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/blog/${post.id}`;
 
   return {
@@ -54,7 +62,20 @@ export default async function PostPage({ params }) {
   console.log("this is the post", post);
 
   if (!post) {
-    return <p>Post not found</p>;
+    // Redirect to a 404 page or display a not found message
+    return (
+      <main className="flex flex-col justify-start gap-4 items-center min-h-screen">
+        <h1 className={`${bangers.className} text-4xl sm:text-7xl font-bold text-slate-600`}>Post Not Found</h1>
+        <p className="text-gray-500">The blog post you're looking for does not exist.</p>
+        <div className="">
+      <Link href="/blog" className="relative inline-block font-medium group py-1.5 px-2.5 ">
+          <span className="absolute inset-0 w-full h-full transition duration-500 ease-out transform translate-x-1 translate-y-1 bg-indigo-500 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+          <span className="absolute inset-0 w-full h-full bg-white border border-indigo-600 group-hover:bg-indigo-50"></span>
+          <span className="relative text-indigo-600 ">&larr; back</span>
+        </Link>
+      </div>
+      </main>
+    );
   }
 
   // Construct the current URL dynamically using environment variable

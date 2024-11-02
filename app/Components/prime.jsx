@@ -16,12 +16,12 @@ export default function Prime() {
           <p>We're giving you 30 days of Prime for FREE!</p>
           <span className="text-sm">Only £8.99/month after free trial.</span>
           <Link
-          className="w-[180px]"
+          className=""
             target="_blank"
             rel="noopener noreferrer nofollow"
             href="https://amzn.to/3C5XP9T"
           >
-            <button className="mr-auto bg-[#FFC403] hover:bg-orange-300 duration-300 text-[#222F3E] px-4 py-2 w-[180px] border-2 border-[#FF6137] rounded font-semibold">
+            <button className="mr-auto bg-[#FFC403] hover:bg-orange-300 duration-300 text-[#222F3E] px-4 w-full sm:w-[180px] py-2 border-2 border-[#FF6137] rounded font-semibold">
               Try Prime
             </button>
           </Link>
