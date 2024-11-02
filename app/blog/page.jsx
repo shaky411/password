@@ -118,6 +118,7 @@ export default async function Blog() {
 
             <div className="mx-auto">
               <Link
+              prefetch={true}
                 href={`/blog/${firstPost.id}`}
                 className={`${oxygen.className} relative inline-block group py-2 px-3`}
               >

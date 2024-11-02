@@ -134,6 +134,7 @@ export default function Profile() {
               or the link below.
             </span>
             <Link
+            prefetch={true}
               target="_blank"
               rel="noopener noreferrer nofollow"
               href="https://github.com/shaky411"

@@ -5,7 +5,7 @@ import kindleSmall from "../../public/assets/kindle_title.png";
 export default function KindleSmall() {
   return (
     <main>
-      <div className="bg-[#222F3E] rounded-lg p-4 w-full sm:w-fit sm:ml-auto">
+      <div className="bg-[#222F3E] hover:bg-opacity-80 duration-300 rounded-lg p-4 w-full sm:w-fit sm:ml-auto">
         <Link
           target="_blank"
           rel="noopener noreferrer nofollow"
