@@ -64,7 +64,7 @@ export default async function PostPage({ params }) {
   if (!post) {
     // Redirect to a 404 page or display a not found message
     return (
-      <main className="flex flex-col justify-start gap-4 items-center min-h-screen">
+      <main className="flex flex-col justify-start gap-4 items-center min-h-screen p-10">
         <h1 className={`${bangers.className} text-4xl sm:text-7xl font-bold text-slate-600`}>Post Not Found</h1>
         <p className="text-gray-500">The blog post you're looking for does not exist.</p>
         <div className="">

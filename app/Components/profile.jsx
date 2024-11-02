@@ -19,7 +19,7 @@ export default function Profile() {
   return (
     <main>
       <div className="max-w-5xl w-full mt-4 flex flex-col md:flex-row gap-10">
-        <div className="max-w-5xl w-full bg-gray-600 shadow-lg rounded-lg text-gray-100">
+        <div className="max-w-5xl w-full bg-gradient-to-b from-gray-800 via-gray-700 to-gray-500 shadow-lg rounded-lg text-gray-100">
           <div className="rounded-t-lg h-52 overflow-hidden">
             <Image
               priority
