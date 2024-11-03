@@ -6,6 +6,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import Footer from "./Components/footer";
 import Navbar from "./Components/navbar";
 import FirstVisitPopup from "./Components/firstVisitPopup";
+import GoogleAnalytics from "./Components/googleAnalytics";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -54,6 +55,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        
         <meta name="google-adsense-account" content="ca-pub-6386565516888254" />
         <script
           type="application/ld+json"
@@ -89,10 +91,12 @@ export default function RootLayout({ children }) {
           data-ad-client="ca-pub-6386565516888254"
           async
         />
+        <GoogleAnalytics />
       </head>
       {/* <Navbar /> */}
-
+      
       <body className={inter.className}>
+      
         <Navbar />
         {children}
         <SpeedInsights />

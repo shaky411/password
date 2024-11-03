@@ -24,6 +24,7 @@ import {
   useDisclosure,
 } from "@nextui-org/react";
 import { faApple, faMicrosoft } from "@fortawesome/free-brands-svg-icons";
+import CopyLinkButton from "./copyLink";
 
 export default function Password() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -233,6 +234,8 @@ export default function Password() {
 
     return `${Math.round(time)} ${timeUnits[unitIndex].unit}`;
   };
+  
+  const currentUrl = `${process.env.NEXT_PUBLIC_BASE_URL}`;
 
   return (
     <div
@@ -338,6 +341,12 @@ export default function Password() {
           <span className="relative text-white">Generate Password</span>
         </button>
       </div>
+
+{/* <div className={`${oxygen.className} mt-4 flex flex-col justify-start items-start mr-auto text-gray-500`}>
+  <span>Share with family & firends</span>
+<CopyLinkButton url={currentUrl} />
+</div> */}
+      
 
       <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
         <ModalContent>
