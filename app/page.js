@@ -25,7 +25,7 @@ export default function Home() {
       </div>
       {/* <Prime /> */}
       <PrimeVideo />
-      <GoogleAd adSlot="7321242428" />
+      {/* <GoogleAd adSlot="7321242428" /> */}
       {/* <Kindle /> */}
       {/* <Hardware /> */}
       <Open />
