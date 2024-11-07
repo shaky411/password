@@ -29,7 +29,7 @@ export default function Home() {
       <Open />
 
       <Profile />
-
+      <Kindle />
       {/* <Example /> */}
     </main>
   );

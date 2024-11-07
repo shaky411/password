@@ -1,11 +1,12 @@
 import MetadataComponent from "../utils/metadata";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { bangers, oxygen, raleway } from "../utils/fonts";
-import ogImage from "../opengraph-image.png"
+import ogImage from "../opengraph-image.png";
 
 import Link from "next/link";
 import Prime from "../Components/prime";
 import PrimeVideo from "../Components/primeVideo";
+import Kindle from "../Components/kindle";
 
 export const metadata = MetadataComponent({
   title: "Info",
@@ -14,13 +15,10 @@ export const metadata = MetadataComponent({
   canonicalUrl: "https://www.passwordmanager.org.uk/info",
   openGraphTitle: "Creating Secuure Passwords",
   openGraphDescription: "Useful information for creating secure passwords",
-  openGraphImage: ogImage
-})
-
+  openGraphImage: ogImage,
+});
 
 export default function Info() {
-    
-
   return (
     <main className="flex flex-col items-center justify-center max-w-6xl mx-auto p-10 sm:p-10">
       <div className="flex flex-col items-center justify-center gap-4 max-w-3xl text-center">
@@ -182,7 +180,6 @@ export default function Info() {
 
         <div className="col-span-2 sm:col-span-3">
           <Prime />
-          
         </div>
 
         {/* <div className="col-span-2 sm:col-span-3">
@@ -190,19 +187,16 @@ export default function Info() {
         </div> */}
       </div>
 
-      
-        
-        
-        
       <div className="my-10 mr-auto">
-      <Link href="/" className="relative inline-block font-medium group py-1.5 px-2.5 ">
+        <Link
+          href="/"
+          className="relative inline-block font-medium group py-1.5 px-2.5 "
+        >
           <span className="absolute inset-0 w-full h-full transition duration-500 ease-out transform translate-x-1 translate-y-1 bg-indigo-500 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
           <span className="absolute inset-0 w-full h-full bg-white border border-indigo-600 group-hover:bg-indigo-50"></span>
           <span className="relative text-indigo-600 ">&larr; back</span>
         </Link>
       </div>
-
-      
     </main>
   );
 }

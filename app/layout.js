@@ -6,7 +6,8 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import Footer from "./Components/footer";
 import Navbar from "./Components/navbar";
 import FirstVisitPopup from "./Components/firstVisitPopup";
-import GoogleAnalytics from "./Components/googleAnalytics";
+import GoogleAnalytics from "./utils/googleAnalytics";
+
 
 const inter = Inter({ subsets: ["latin"] });
 

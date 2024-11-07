@@ -10,6 +10,7 @@ export default function Hero() {
   return (
     <div className="flex flex-col sm:flex-row gap-4 items-center justify-center mb-4">
       <Image
+      placeholder="blur"
         priority
         src={mainImage}
         width={325}

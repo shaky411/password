@@ -2,6 +2,8 @@
 
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { bangers, oxygen, raleway } from "../utils/fonts";
+import googleLogo from "../../public/assets/google_analytics.png";
+import Image from "next/image";
 
 import Link from "next/link";
 import { useState } from "react";
@@ -100,6 +102,18 @@ export default function Cookies() {
             </Link>{" "}
             .
           </p>
+
+          <div className="flex flex-col items-center justify-center mt-6 gap-4">
+            <Link
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              className="text-blue-500"
+              href="https://support.google.com/analytics/answer/12159447?hl=en"
+            >
+              <Image src={googleLogo} widht={70} height={70} />
+            </Link>
+            
+          </div>
         </div>
       </div>
     </main>

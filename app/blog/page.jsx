@@ -58,9 +58,12 @@ async function fetchPosts() {
   }
 
   const data = await res.json();
-  console.log("Fetched posts data:", data); // Log the data to confirm it's an array
+  
+  
   return Array.isArray(data) ? data : []; // Ensure we return an array even if data is undefined
 }
+
+
 
 export default async function Blog() {
   const posts = await fetchPosts();
