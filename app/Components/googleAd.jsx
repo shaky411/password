@@ -1,5 +1,3 @@
-"use client"
-
 // components/GoogleAd.js
 import { useEffect } from 'react';
 
@@ -23,7 +21,12 @@ const GoogleAd = ({ adSlot, className = '', style = {} }) => {
       {/* Ad unit */}
       <ins
         className={`adsbygoogle ${className}`}
-        style={{ display: 'block', ...style }}
+        style={{
+          display: 'block',
+          minWidth: '250px',    // Set a minimum width for the ad container
+          minHeight: '250px',   // Set a minimum height for the ad container
+          ...style
+        }}
         data-ad-client="ca-pub-6386565516888254"
         data-ad-slot={adSlot}
         data-ad-format="auto"
