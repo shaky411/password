@@ -1,3 +1,5 @@
+"use client"
+
 // components/GoogleAd.js
 import { useEffect } from 'react';
 
