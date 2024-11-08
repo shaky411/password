@@ -19,10 +19,10 @@ const GoogleAd = ({ adSlot, className = '', style = {} }) => {
     <>
       {/* Google AdSense script */}
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6386565516888254"
-              crossOrigin="anonymous"></script>
+     crossOrigin="anonymous"></script>
       {/* Ad unit */}
       <ins
-        className={`adsbygoogle ${className} flex gap-5`}
+        className={`adsbygoogle ${className}`}
         style={{
           display: 'block',
           minWidth: '250px',    // Set a minimum width for the ad container
