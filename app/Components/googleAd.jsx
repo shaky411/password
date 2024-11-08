@@ -22,13 +22,8 @@ const GoogleAd = ({ adSlot, className = '', style = {} }) => {
      crossOrigin="anonymous"></script>
       {/* Ad unit */}
       <ins
-        className={`adsbygoogle ${className}`}
-        style={{
-          display: 'block',
-          minWidth: '250px',    // Set a minimum width for the ad container
-          minHeight: '250px',   // Set a minimum height for the ad container
-          ...style
-        }}
+        className={`adsbygoogle ${className} block w-full max-w-[500px] min-h-[250px] mx-auto my-4`}
+        style={style}
         data-ad-client="ca-pub-6386565516888254"
         data-ad-slot={adSlot}
         data-ad-format="auto"
