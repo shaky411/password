@@ -31,7 +31,7 @@ export default function Home() {
       <Open />
 
       <Profile />
-      <Kindle />
+      {/* <Kindle /> */}
       <GoogleAd adSlot="8464170807" />
       {/* <Example /> */}
     </main>
