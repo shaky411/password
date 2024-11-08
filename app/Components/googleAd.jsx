@@ -22,7 +22,7 @@ const GoogleAd = ({ adSlot, className = '', style = {} }) => {
               crossOrigin="anonymous"></script>
       {/* Ad unit */}
       <ins
-        className={`adsbygoogle ${className}`}
+        className={`adsbygoogle ${className} flex gap-5`}
         style={{
           display: 'block',
           minWidth: '250px',    // Set a minimum width for the ad container
