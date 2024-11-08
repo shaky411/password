@@ -10,7 +10,7 @@ import Profile from "./Components/profile";
 import Prime from "./Components/prime";
 import PrimeVideo from "./Components/primeVideo";
 import Kindle from "./Components/kindle";
-// import GoogleAd from "./Components/googleAd";
+import GoogleAd from "./Components/googleAd";
 
 export default function Home() {
   return (
