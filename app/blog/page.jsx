@@ -228,10 +228,11 @@ export default async function Blog() {
                 </li>
               </ul>
             ))}
+            {/* <GoogleAd adSlot="8464170807" /> */}
           </div>
 
           <Kindle />
-          <GoogleAd adSlot="8464170807" />
+          
         </div>
       </div>
 

@@ -11,6 +11,7 @@ import {
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import KindleSmall from "@/app/Components/kindleSmall";
+import GoogleAd from "@/app/Components/googleAd";
 
 async function getPost(postId) {
   const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/posts`);
@@ -122,6 +123,7 @@ export default async function PostPage({ params }) {
       <span className={`${raleway.className} italic text-gray-400 text-sm`}>Thanks for taking the time to read my post.</span>
 
         <KindleSmall />
+        
       {/* Sharing links */}
       <div className="flex flex-col mt-4">
         <span className={`${raleway.className} text-blue-500`}>Share it</span>
@@ -152,6 +154,8 @@ export default async function PostPage({ params }) {
           <CopyLinkButton url={currentUrl} />
         </div>
       </div>
+
+      <GoogleAd adSlot="8464170807" />
 
       <div className="mt-4 mr-auto">
         <Link
