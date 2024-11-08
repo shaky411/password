@@ -10,7 +10,7 @@ import Profile from "./Components/profile";
 import Prime from "./Components/prime";
 import PrimeVideo from "./Components/primeVideo";
 import Kindle from "./Components/kindle";
-import GoogleAd from "./Components/googleAd";
+// import GoogleAd from "./Components/googleAd";
 
 export default function Home() {
   return (
@@ -25,7 +25,7 @@ export default function Home() {
       </div>
       {/* <Prime /> */}
       <PrimeVideo />
-      {/* <GoogleAd adSlot="7321242428" /> */}
+      <GoogleAd adSlot="7321242428" />
       {/* <Kindle /> */}
       {/* <Hardware /> */}
       <Open />

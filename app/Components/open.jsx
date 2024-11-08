@@ -20,6 +20,7 @@ export default function Open() {
 
           <div className="mx-auto w-full sm:w-fit">
             <Link
+              aria-label="link to my github profile"
               href="https://github.com/shaky411/password.git"
               target="_blank"
               rel="noopener noreferrer nofollow"
