@@ -5,6 +5,7 @@ import Image from "next/image";
 import NewsletterForm from "../Components/newsForm";
 import ogImage from "../blog_ogImage.jpg"
 import Kindle from "../Components/kindle";
+import GoogleAd from "../Components/googleAd";
 
 export const metadata = {
   title: {
@@ -230,6 +231,7 @@ export default async function Blog() {
           </div>
 
           <Kindle />
+          <GoogleAd adSlot="8464170807" />
         </div>
       </div>
 

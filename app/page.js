@@ -32,6 +32,7 @@ export default function Home() {
 
       <Profile />
       <Kindle />
+      <GoogleAd adSlot="8464170807" />
       {/* <Example /> */}
     </main>
   );

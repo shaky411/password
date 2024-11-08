@@ -7,6 +7,7 @@ import Link from "next/link";
 import Prime from "../Components/prime";
 import PrimeVideo from "../Components/primeVideo";
 import Kindle from "../Components/kindle";
+import GoogleAd from "../Components/googleAd";
 
 export const metadata = MetadataComponent({
   title: "Info",
@@ -180,6 +181,7 @@ export default function Info() {
 
         <div className="col-span-2 sm:col-span-3">
           <Prime />
+          <GoogleAd adSlot="8464170807" />
         </div>
 
         {/* <div className="col-span-2 sm:col-span-3">
