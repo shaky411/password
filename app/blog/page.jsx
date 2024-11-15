@@ -6,46 +6,17 @@ import NewsletterForm from "../Components/newsForm";
 import ogImage from "../blog_ogImage.jpg"
 import Kindle from "../Components/kindle";
 import GoogleAd from "../Components/googleAd";
+import MetadataComponent from "../utils/metadata";
 
-export const metadata = {
-  title: {
-    default: "Marc's Blog",
-  },
-  alternates: {
-    canonical: "https://www.passwordmanager.org.uk/blog",
-  },
-  keywords:
-    "blog, blogs, marc's blog, my blog, surfing, tech, trails, family",
-  openGraph: {
-    title: "Marc's Blog",
-    description: "Follow along as I share insights on what I'm learning, the waves I'm catching, and the paths I'm navigating.",
-    images: [
-      {
-        url: ogImage.src,
-        width: ogImage.width,
-        height: ogImage.height,
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-  },
+export const metadata = MetadataComponent({
+  title: "Marc's Blog - Thoughts on Surfing, Tech & Country Walks",
   description: "Follow along as I share insights on what I'm learning, the waves I'm catching, and the paths I'm navigating.",
-  metadataBase: new URL("https://www.passwordmanager.org.uk/blog"),
-  robots: {
-    index: true,
-    follow: true,
-    nocache: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      noimageindex: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-};
+  keywords: "blog, blogs, marc's blog, my blog, surfing, tech, trails, family",
+  canonicalUrl: "https://www.passwordmanager.org.uk/blog",
+  openGraphTitle: "Marc's Blog - Thoughts on Surfing, Tech & Country Walks",
+  openGraphDescription: "Follow along as I share insights on what I'm learning, the waves I'm catching, and the paths I'm navigating.",
+  openGraphImage: ogImage,
+});
 
 async function fetchPosts() {
   const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/posts`, {

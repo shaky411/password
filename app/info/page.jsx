@@ -10,8 +10,8 @@ import Kindle from "../Components/kindle";
 import GoogleAd from "../Components/googleAd";
 
 export const metadata = MetadataComponent({
-  title: "Info",
-  description: "Useful information for creating secure passwords",
+  title: "Information for creating strong secure passwords",
+  description: "Useful information for creating secure passwords to protect your data and online security",
   keywords: "info, passwords, information",
   canonicalUrl: "https://www.passwordmanager.org.uk/info",
   openGraphTitle: "Creating Secuure Passwords",

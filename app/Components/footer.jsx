@@ -31,7 +31,7 @@ export default function Footer() {
           </span>
         </div>
 
-        <span className="text-tiny text-slate-400">
+        {/* <span className="text-tiny text-slate-400">
           Main hero image created by{" "}
           <Link
             href="https://www.freepik.com/"
@@ -40,7 +40,7 @@ export default function Footer() {
           >
             <strong>Freepik</strong>
           </Link>
-        </span>
+        </span> */}
 
         <div className="text-slate-400 hover:text-gray-700 duration-300 text-sm mt-4 sm:mt-0 sm:ml-2 border p-2">
           <span className="mr-2">Update Cookies</span>

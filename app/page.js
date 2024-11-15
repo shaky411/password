@@ -11,11 +11,13 @@ import Prime from "./Components/prime";
 import PrimeVideo from "./Components/primeVideo";
 import Kindle from "./Components/kindle";
 import GoogleAd from "./Components/googleAd";
+import HeroNew from "./Components/heroNew";
 
 export default function Home() {
   return (
     <main className="flex flex-col items-center justify-center max-w-4xl mx-auto p-6 sm:p-10">
-      <Hero />
+      {/* <Hero /> */}
+      <HeroNew />
       <Password />
 
       <Strip />
