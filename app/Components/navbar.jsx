@@ -46,7 +46,7 @@ export default function Navbar() {
         >
           Password Generator
         </Link>
-        <span className={`${oxygen.className} text-gray-500`}>{todaysDate}</span>
+        <span className={`${oxygen.className} hidden sm:block text-gray-500`}>{todaysDate}</span>
       </div>
 
       <ul className="hidden md:flex">
