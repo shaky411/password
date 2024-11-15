@@ -37,7 +37,7 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="flex justify-between items-center w-full p-7 px-4 text-white bg-gray-700 mb-10 relative z-20">
+    <div className="flex justify-between items-center w-full p-7 px-4 text-white bg-gray-700 relative z-20">
       <div className="flex items-center gap-2 ml-4">
         <Image src={logo} width={50} />
         <Link
