@@ -7,6 +7,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCogs, faCookie } from "@fortawesome/free-solid-svg-icons";
 import { useCookieConsent } from "../utils/useCookieConsent";
 import FirstVisitPopup from "./firstVisitPopup";
+import Image from "next/image";
+import logo from "../../public/assets/IMG_1114.png"
 
 export default function Footer() {
   const currentYear = dayjs().format("YYYY");
@@ -17,6 +19,8 @@ export default function Footer() {
     <footer className={`${oxygen.className} relative`}>
       <main className="flex flex-col sm:flex-row items-center justify-between max-w-6xl mx-auto mb-10 p-6">
         <div className="sm:mr-auto">
+          <div className="flex flex-col sm:flex-row items-center gap-2">
+          <Image src={logo} width={40} />
           <span className="mr-2 text-tiny text-slate-400">
             Site powered by{" "}
             <Link
@@ -29,6 +33,8 @@ export default function Footer() {
             </Link>{" "}
             &copy; {currentYear}
           </span>
+          </div>
+          
         </div>
 
         {/* <span className="text-tiny text-slate-400">

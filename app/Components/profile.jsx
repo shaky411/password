@@ -34,7 +34,7 @@ export default function Profile() {
 
           <div className="text-center mt-2">
             <h2
-               className={`${bangers.className} text-3xl sm:text-4xl text-gray-200`}
+              className={`${bangers.className} text-3xl sm:text-4xl text-gray-200`}
             >
               Marc Norris
             </h2>
@@ -128,12 +128,11 @@ export default function Profile() {
           </div>
 
           <div className="p-10 bg-gray-200 text-slate-900 rounded-b-lg mt-2 flex flex-col gap-4 items-center justify-center">
-            {/* <h2 className={`${bangers.className} text-3xl text-gray-600`}>Get in Touch</h2> */}
             <span className={`${space.className} text-center`}>
-              For all enquiries, please reach out through one of my social links
-              or the link below.
+              For all enquiries please reach out through one of my social links
+              above.
             </span>
-            <Link
+            {/* <Link
             prefetch={true}
               target="_blank"
               rel="noopener noreferrer nofollow"
@@ -142,7 +141,7 @@ export default function Profile() {
             >
               <FontAwesomeIcon icon={faGithub} className="mr-2" />
               Github
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

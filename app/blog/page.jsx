@@ -57,7 +57,7 @@ export default async function Blog() {
           <h2
             className={`${bangers.className} text-5xl font-light text-slate-600`}
           >
-            Blog
+            Marc's Blog
           </h2>
           <p className={`${raleway.className} font-light mt-4`}>
             Follow along as I share insights on what I'm learning, the waves I'm

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import mainImage from "../../assets/Image-1.jpg";
+import logo from "../../public/assets/IMG_1114.png"
 import Link from "next/link";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,6 +11,9 @@ export default function HeroNew() {
   return (
     <div className="flex gap-4 items-start justify-center mb-4 bg-[url('../public/assets/password_hero.png')] bg-cover h-[600px] bg-no-repeat bg-center w-full rounded-md">
       <div className=" flex flex-col text-center p-10 md:p-20">
+        {/* <div className="flex">
+        <Image src={logo} width={100} alt="main logo" />
+        </div> */}
         <h1
           className={`${raleway.className} font-semibold text-4xl md:text-5xl lg:text-6xl text-gray-700`}
         >
