@@ -24,6 +24,9 @@ export const metadata = {
     title: "Create Secure Passwords with Our Free Password Generator",
     description:
       "Try our free online password generator for secure and random passwords to protect your accounts. Simple and user-friendly.",
+      type: "website",
+      site_name: "Password Generator",
+      url: "https://www.passwordmanager.org.uk"
     images: [
       {
         url: ogImage.src,
@@ -45,9 +48,9 @@ export const metadata = {
     googleBot: {
       index: true,
       follow: true,
-      noarchive: true,
-      noimageindex: true,
-      nositelinkssearchbox: true,
+      noarchive: false,
+      noimageindex: false,
+      nositelinkssearchbox: false,
       "max-video-preview": -1,
       "max-image-preview": "large",
       "max-snippet": -1,

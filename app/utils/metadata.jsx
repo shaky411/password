@@ -8,6 +8,9 @@ const MetadataComponent = ({
   openGraphTitle = "Free to use Password Generator",
   openGraphDescription = "Simple password generator created with NextJS",
   openGraphImage = ogImage,
+  openGraphType = "website",
+  openGraphSiteName = "Password Generator",
+  openGraphUrl = "https://www.passwordmanager.org.uk"
 }) => ({
   title: {
     default: title,
@@ -19,6 +22,9 @@ const MetadataComponent = ({
   openGraph: {
     title: openGraphTitle,
     description: openGraphDescription,
+    type: openGraphType,
+    site_name: openGraphSiteName,
+    url: openGraphUrl,
     images: [
       {
         url: openGraphImage.src,
@@ -39,9 +45,9 @@ const MetadataComponent = ({
     googleBot: {
       index: true,
       follow: true,
-      noarchive: true,
-      noimageindex: true,
-      nositelinkssearchbox: true,
+      noarchive: false,
+      noimageindex: false,
+      nositelinkssearchbox: false,
       "max-video-preview": -1,
       "max-image-preview": "large",
       "max-snippet": -1,
