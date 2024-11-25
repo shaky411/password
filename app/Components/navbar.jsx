@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { bangers, oxygen } from "../utils/fonts";
 import dayjs from "dayjs";
@@ -11,48 +11,38 @@ import logo from "../../public/assets/IMG_1114.png";
 export default function Navbar() {
   const todaysDate = dayjs().format("DD-MM-YYYY");
   const [nav, setNav] = useState(false);
-  const [showNavbar, setShowNavbar] = useState(0);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const [showNavbar, setShowNavbar] = useState(true); // Navbar visible initially
+  const lastScrollYRef = useRef(0); // Ref to track last scroll position
 
   const links = [
-    {
-      id: 1,
-      link: "home",
-      href: "/",
-    },
-    {
-      id: 2,
-      link: "contact",
-      href: "/#contact",
-    },
-    {
-      id: 3,
-      link: "info",
-      href: "/info",
-    },
-    {
-      id: 4,
-      link: "blog",
-      href: "/blog",
-    },
+    { id: 1, link: "home", href: "/" },
+    { id: 2, link: "contact", href: "/#contact" },
+    { id: 3, link: "info", href: "/info" },
+    { id: 4, link: "blog", href: "/blog" },
   ];
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      if (currentScrollY > lastScrollY && currentScrollY > 50) {
-        setShowNavbar(false); // Hide navbar on scroll down
+
+      if (currentScrollY > lastScrollYRef.current && currentScrollY > 50) {
+        // Scrolling down, hide navbar
+        setShowNavbar(false);
       } else {
-        setShowNavbar(true); // Show navbar on scroll up
+        // Scrolling up, show navbar
+        setShowNavbar(true);
       }
-      setLastScrollY(currentScrollY);
+
+      lastScrollYRef.current = currentScrollY; // Update the ref
     };
 
+    // Add scroll event listener
     window.addEventListener("scroll", handleScroll);
     return () => {
+      // Cleanup event listener
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [lastScrollY]);
+  }, []); // No dependencies needed since we use refs
 
   return (
     <div
@@ -62,7 +52,7 @@ export default function Navbar() {
     >
       <div className="flex justify-between items-center w-full max-w-7xl mx-auto">
         <div className="flex items-center gap-2 ml-4">
-          <Image src={logo} width={50} />
+          <Image src={logo} width={50} alt="Logo" />
           <Link
             href="/"
             className={`${bangers.className} text-xl sm:text-4xl text-pink-400 border p-2 rounded-lg border-pink-400 font-signature ml-2`}

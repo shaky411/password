@@ -88,7 +88,7 @@ export default async function PostPage({ params }) {
 
       <Image
         priority
-        className="rounded-md w-full"
+        className="rounded-md w-full mt-36"
         src={post.image}
         width={1100}
         height={400}
