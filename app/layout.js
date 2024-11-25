@@ -26,7 +26,7 @@ export const metadata = {
       "Try our free online password generator for secure and random passwords to protect your accounts. Simple and user-friendly.",
       type: "website",
       site_name: "Password Generator",
-      url: "https://www.passwordmanager.org.uk"
+      url: "https://www.passwordmanager.org.uk",
     images: [
       {
         url: ogImage.src,
