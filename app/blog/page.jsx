@@ -52,7 +52,7 @@ export default async function Blog() {
 
   return (
     <main className="flex flex-col items-center justify-center max-w-5xl mx-auto p-10 sm:p-10">
-      <div className="flex flex-col items-center justify-between gap-4 text-center">
+      <div className="flex flex-col items-center justify-between gap-4 text-center mt-36">
         <div>
           <h2
             className={`${bangers.className} text-5xl font-light text-slate-600`}

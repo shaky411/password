@@ -9,7 +9,7 @@ import { bangers, raleway, oxygen } from "../utils/fonts";
 
 export default function HeroNew() {
   return (
-    <div className="flex gap-4 items-start justify-center mb-4 bg-[url('../public/assets/password_hero.png')] bg-cover h-[600px] bg-no-repeat bg-center w-full rounded-md">
+    <div className="flex gap-4 items-start justify-center mb-4 bg-[url('../public/assets/password_hero.png')] bg-cover h-[600px] bg-no-repeat bg-center w-full rounded-md mt-32">
       <div className=" flex flex-col text-center p-10 md:p-20">
         {/* <div className="flex">
         <Image src={logo} width={100} alt="main logo" />

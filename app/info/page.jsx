@@ -22,7 +22,7 @@ export const metadata = MetadataComponent({
 export default function Info() {
   return (
     <main className="flex flex-col items-center justify-center max-w-6xl mx-auto p-10 sm:p-10">
-      <div className="flex flex-col items-center justify-center gap-4 max-w-3xl text-center">
+      <div className="flex flex-col items-center justify-center gap-4 max-w-3xl text-center mt-32">
         <h2
           className={`${bangers.className} text-5xl font-light text-slate-600`}
         >
