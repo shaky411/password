@@ -16,21 +16,14 @@ export default function PIPAD() {
             Helping You Navigate PIP Claims with Transparent, Affordable Support
             – No Win, No Fee.
           </p>
-          <Link
-            className=""
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            href="https://amzn.to/3C5XP9T"
-          >
             <Link
               href="https://www.pip-assist.co.uk"
               target="_blank"
               rel="noopener noreferrer nofollow"
-              className="mr-auto bg-[#CA5659] text-slate-100 hover:opacity-50 duration-300 px-4 w-full sm:w-[180px] py-2 border-2 rounded-full font-semibold"
+              className="text-center bg-[#CA5659] text-slate-100 hover:opacity-50 duration-300 px-4 w-full sm:w-[180px] py-2 rounded-full shadow-md font-semibold"
             >
               More info
             </Link>
-          </Link>
         </div>
 
         <div>
