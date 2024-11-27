@@ -21,7 +21,7 @@ export const metadata = {
   keywords:
     "password generator, secure password generator, free password generator, online security tool, data protection, internet safety, Next.js password generator",
   openGraph: {
-    title: "Create Secure Passwords with Our Free Password Generator",
+    title: "Random Password Generator | Secure and Free Password Tool",
     description:
       "Try our free online password generator for secure and random passwords to protect your accounts. Simple and user-friendly.",
       type: "website",
