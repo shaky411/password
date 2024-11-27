@@ -8,7 +8,7 @@ import { oxygen, space } from "../utils/fonts";
 export default function Open() {
   return (
     <main>
-      <div className="flex flex-col sm:flex-row bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-300 p-10 rounded-lg justify-center items-center border gap-5 shadow my-4">
+      <div className="flex flex-col sm:flex-row bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-300 p-10 rounded-lg justify-center items-center border gap-5 shadow mb-4">
         <Image src={githubImage} width={200} height={200} alt="github logo" />
 
         <div className="sm:w-1/2 flex flex-col gap-4">
