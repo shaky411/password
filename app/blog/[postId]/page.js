@@ -122,7 +122,7 @@ export default async function PostPage({ params }) {
 
       <span className={`${raleway.className} italic text-gray-400 text-sm`}>Thanks for taking the time to read my post.</span>
 
-        <KindleSmall />
+        {/* <KindleSmall /> */}
         
       {/* Sharing links */}
       <div className="flex flex-col mt-4">
