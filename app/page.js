@@ -26,8 +26,11 @@ export default function Home() {
       <div className="mr-auto">
         <Managers />
       </div>
+      <div>
+        {/* <h2>Etsy Ad here...</h2> */}
+      </div>
       {/* <Prime /> */}
-      <PrimeVideo />
+      {/* <PrimeVideo /> */}
       <GoogleAd adSlot="8464170807" />
       {/* <Kindle /> */}
       {/* <Hardware /> */}

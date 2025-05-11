@@ -199,10 +199,10 @@ export default async function Blog() {
                 </li>
               </ul>
             ))}
-            {/* <GoogleAd adSlot="8464170807" /> */}
+            <GoogleAd adSlot="8464170807" />
           </div>
 
-          <Kindle />
+          {/* <Kindle /> */}
           
         </div>
       </div>

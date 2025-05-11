@@ -180,7 +180,7 @@ export default function Info() {
         </div>
 
         <div className="col-span-2 sm:col-span-3">
-          <Prime />
+          {/* <Prime /> */}
           <GoogleAd adSlot="8464170807" />
         </div>
 
