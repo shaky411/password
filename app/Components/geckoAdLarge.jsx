@@ -6,7 +6,7 @@ import geckoLogo from "../../public/assets/gecko3d_logo.png";
 export default function GeckoAdLarge() {
   return (
     <main>
-      <div className="bg-[#3A4536] grid gap-10 border-[#FF3483] grid-cols-1 items-center md:grid-cols-2 p-10 py-20 rounded-lg shadow border-2">
+      <div className="bg-[#3A4536] grid gap-10 border-[#FF3483] grid-cols-1 items-center md:grid-cols-2 p-10 py-20 rounded-lg shadow border-2 w-full">
         <div className="flex flex-col gap-4">
           {/* <Image className="" src={pipLogo} width={80} alt="amazon prime logo" /> */}
 

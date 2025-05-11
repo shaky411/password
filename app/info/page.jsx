@@ -188,7 +188,11 @@ export default function Info() {
         {/* <div className="col-span-2 sm:col-span-3">
         <PrimeVideo />
         </div> */}
-  <div className="col-span-3"><GeckoAdLarge/></div>
+
+        <div className="col-span-2 sm:col-span-3">
+        <GeckoAdLarge/>
+        </div>
+  
 
       </div>
 
