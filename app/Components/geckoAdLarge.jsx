@@ -3,7 +3,7 @@ import Link from "next/link";
 import pipLogo from "../../public/assets/horizontal_large.png";
 import geckoLogo from "../../public/assets/gecko3d_logo.png";
 
-export default function GeckoAd() {
+export default function GeckoAdLarge() {
   return (
     <main>
       <div className="bg-[#3A4536] grid gap-10 border-[#FF3483] grid-cols-1 items-center md:grid-cols-2 p-10 py-20 rounded-lg shadow border-2">

@@ -8,6 +8,7 @@ import Prime from "../Components/prime";
 import PrimeVideo from "../Components/primeVideo";
 import Kindle from "../Components/kindle";
 import GoogleAd from "../Components/googleAd";
+import GeckoAdLarge from "../Components/geckoAdLarge";
 
 export const metadata = MetadataComponent({
   title: "Information for creating strong secure passwords",
@@ -187,6 +188,8 @@ export default function Info() {
         {/* <div className="col-span-2 sm:col-span-3">
         <PrimeVideo />
         </div> */}
+  <div className="col-span-3"><GeckoAdLarge/></div>
+
       </div>
 
       <div className="my-10 mr-auto">
