@@ -13,6 +13,7 @@ import Kindle from "./Components/kindle";
 import GoogleAd from "./Components/googleAd";
 import HeroNew from "./Components/heroNew";
 import PIPAD from "./Components/pipAd";
+import GeckoAd from "./Components/geckoAd";
 
 export default function Home() {
   return (
@@ -35,7 +36,8 @@ export default function Home() {
       {/* <Kindle /> */}
       {/* <Hardware /> */}
       <Open />
-      <PIPAD />
+      {/* <PIPAD /> */}
+      <GeckoAd />
       <Profile />
       {/* <Kindle /> */}
       <GoogleAd adSlot="8464170807" />
