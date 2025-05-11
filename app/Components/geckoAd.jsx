@@ -10,8 +10,8 @@ export default function GeckoAd() {
         <div className="flex flex-col gap-4">
           {/* <Image className="" src={pipLogo} width={80} alt="amazon prime logo" /> */}
 
-          <h2 className="text-2xl font-semibold text-[#FFE2B8]">
-            Octopus Home Mini Cradle
+          <h2 className="text-xl font-semibold text-[#FFE2B8]">
+            Octopus Energy Home Mini Cradle
           </h2>
           <p className="text-white">
           Octopus Home Mini Mount | 3D Printed Cable-Free Hub Holder
@@ -26,7 +26,7 @@ export default function GeckoAd() {
             </Link>
         </div>
 
-        <div>
+        <div className="m-auto">
           <Image src={geckoLogo} width={300} alt="amazon logo" />
         </div>
       </div>
