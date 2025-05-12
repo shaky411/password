@@ -7,6 +7,7 @@ import ogImage from "../blog_ogImage.jpg"
 import Kindle from "../Components/kindle";
 import GoogleAd from "../Components/googleAd";
 import MetadataComponent from "../utils/metadata";
+import GeckoAdLarge from "../Components/geckoAdLarge";
 
 export const metadata = MetadataComponent({
   title: "Marc's Blog - Thoughts on Surfing, Tech & Country Walks",
@@ -203,6 +204,7 @@ export default async function Blog() {
           </div>
 
           {/* <Kindle /> */}
+            
           
         </div>
       </div>

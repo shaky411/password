@@ -32,12 +32,13 @@ export default function Home() {
       </div>
       {/* <Prime /> */}
       {/* <PrimeVideo /> */}
+      <GeckoAd />
       <GoogleAd adSlot="8464170807" />
       {/* <Kindle /> */}
       {/* <Hardware /> */}
       <Open />
       {/* <PIPAD /> */}
-      <GeckoAd />
+      
       <Profile />
       {/* <Kindle /> */}
       <GoogleAd adSlot="8464170807" />
