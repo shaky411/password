@@ -181,6 +181,10 @@ export default function Info() {
         </div>
 
         <div className="col-span-2 sm:col-span-3">
+        <GeckoAdLarge/>
+        </div>
+
+        <div className="col-span-2 sm:col-span-3">
           {/* <Prime /> */}
           <GoogleAd adSlot="8464170807" />
         </div>
@@ -189,9 +193,7 @@ export default function Info() {
         <PrimeVideo />
         </div> */}
 
-        <div className="col-span-2 sm:col-span-3">
-        <GeckoAdLarge/>
-        </div>
+        
   
 
       </div>
